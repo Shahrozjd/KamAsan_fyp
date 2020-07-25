@@ -4,7 +4,7 @@
     <padding android:left="1dp" android:top="1dp" android:right="1dp"
         android:bottom="1dp"
         />
-    <solid android:color="@color/colorlogintextfieldborder"></solid>
+    <solid android:color="@color/mainaccent"></solid>
     <corners android:bottomRightRadius="5dp"
         android:bottomLeftRadius="5dp"
         android:topRightRadius="5dp"

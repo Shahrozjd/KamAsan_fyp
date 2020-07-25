@@ -53,7 +53,6 @@ public class CustomerMessageActivity extends AppCompatActivity {
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         lv_chats = findViewById(R.id.lv_chats);
         Button send = findViewById(R.id.btn_send);
-        Button cancel = findViewById(R.id.btn_cancel);
         final EditText ed_messge =findViewById(R.id.ed_message);
 
 
@@ -300,12 +299,6 @@ public class CustomerMessageActivity extends AppCompatActivity {
             }
         });
 
-cancel.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        ed_messge.setText("");
-    }
-});
 
         lv_chats.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override

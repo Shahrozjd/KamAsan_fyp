@@ -1,128 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
     tools:context=".ServiceProviderSignUpPart2Activity">
 
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Service Provider Sign Up"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:id="@+id/tv_title_signup2"
-        android:textColor="@color/colorSapphireBlue"
-        />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="0.4"
+        >
 
-    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/item_scrollvw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_title_signup2"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-
-        <RelativeLayout
+        <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/item_scrollvw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/relativelayout2"
-            android:layout_below="@+id/tv_title_signup2">
+            android:layout_below="@+id/tv_title_signup2"
+            xmlns:android="http://schemas.android.com/apk/res/android">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select Category"
-                android:textSize="20sp"
-                android:layout_marginTop="20dp"
-               android:textAlignment="textStart"
-                android:id="@+id/txt_lbl_category"
-                android:textColor="@color/colorSapphireBlue"
-                />
+                android:id="@+id/relativelayout2"
+                android:layout_below="@+id/tv_title_signup2">
 
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:layout_below="@+id/txt_lbl_category"
-                android:id="@+id/list_categories"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Category"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:id="@+id/txt_lbl_category"
+                    android:textColor="@color/mainaccent"
+                    />
 
-                ></ListView>
-        </RelativeLayout>
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_below="@+id/txt_lbl_category"
+                    android:id="@+id/list_categories"
 
-    </ScrollView>
+                    ></ListView>
+            </RelativeLayout>
 
+        </ScrollView>
 
-    <RelativeLayout
-        android:id="@+id/relativelayout_radius"
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/item_scrollvw"
-        android:layout_marginTop="7dp"
-        android:background="@drawable/imageview_border">
+        android:orientation="vertical"
+        android:gravity="top"
+        android:layout_weight="0.4"
+        >
 
-        <SeekBar
-            android:id="@+id/seekBar"
+
+        <RelativeLayout
+            android:id="@+id/relativelayout_radius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lbl_radius"
-            android:layout_marginTop="5dp"
+            android:layout_below="@+id/item_scrollvw"
+            android:layout_marginTop="7dp"
+            >
 
-            android:max="5"
-            android:min="1"
-            android:progress="2" />
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radiuslinear"
+                android:layout_marginTop="5dp"
+                android:thumbTint="@color/mainaccent"
+                android:theme="@style/Dialog"
+                android:max="5"
+                android:min="1"
+                android:progress="2" />
 
-        <TextView
-            android:id="@+id/lbl_radius"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_lbl_op_radius"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="2dp"
-            android:text="Radius:"
-            android:textSize="20sp"
+            <LinearLayout
+                android:id="@+id/radiuslinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_lbl_op_radius"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
 
-            />
 
-        <TextView
-            android:id="@+id/radius_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_lbl_op_radius"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="2dp"
-            android:layout_toRightOf="@id/lbl_radius"
-            android:textSize="20sp"
+                <TextView
+                    android:id="@+id/lbl_radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Radius:"
+                    android:textColor="@color/mainaccent"
+                    android:textSize="20sp"
 
-            />
+                    />
 
-        <TextView
-            android:id="@+id/lbl_km"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_lbl_op_radius"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="2dp"
-            android:layout_toRightOf="@id/radius_value"
-            android:text="KM"
-            android:textSize="20sp"
+                <TextView
+                    android:id="@+id/radius_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_lbl_op_radius"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@id/lbl_radius"
+                    android:textSize="20sp"
 
-            />
+                    />
 
-        <TextView
-            android:id="@+id/txt_lbl_op_radius"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Operational Radius"
-            android:textColor="@color/colorSapphireBlue"
-            android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/lbl_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_lbl_op_radius"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@id/radius_value"
+                    android:text="KM"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
 
-    </RelativeLayout>
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_lbl_op_radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Operational Radius"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/mainaccent"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -134,20 +170,18 @@
         >
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:id="@+id/btn_back"
-            android:background="@color/colorSapphireBlue"
+            android:background="@drawable/left_arrow"
             android:textColor="@color/colorWhite"
             android:layout_alignParentLeft="true"/>
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:id="@+id/btn_Next"
             android:layout_alignParentRight="true"
-            android:background="@color/colorSapphireBlue"
+            android:background="@drawable/right_arrow"
             android:textColor="@color/colorWhite"
             />
 
@@ -156,4 +190,4 @@
 
 
 
-</RelativeLayout>
+</LinearLayout>

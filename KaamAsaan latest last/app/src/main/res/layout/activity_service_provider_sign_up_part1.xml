@@ -1,144 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ServiceProviderSignUpPart1Activity"
+    android:orientation="vertical"
+    android:gravity="center"
     android:background="@color/colorWhite">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/defaultprofileimage"
-        app:civ_border_color="#00B8B8"
-        app:civ_border_width="2dp"
-       ></de.hdodenhof.circleimageview.CircleImageView>
-
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_pic_gallery"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/imv"
-        android:layout_marginTop="-30dp"
-        android:layout_marginBottom="3dp"
-        android:layout_toRightOf="@+id/imv"
-        android:layout_marginLeft="-20dp"
-        android:background="@drawable/circle_backgound4"
-
-        android:text="Upload Profile Picture"></androidx.appcompat.widget.AppCompatImageButton>
-
-       <EditText
-           android:layout_width="200dp"
-           android:layout_height="30dp"
-           android:textSize="15sp"
-           android:paddingLeft="10dp"
-           android:layout_centerHorizontal="true"
-           android:layout_marginTop="10dp"
-           android:layout_below="@+id/btn_pic_gallery"
-           android:background="@drawable/logintxtfield_border"
-
-           android:id="@+id/ed_name"
-           android:hint="Full Name"
-           android:layout_marginLeft="3dp"
-           android:layout_marginRight="3dp"
-           />
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:textSize="15sp"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/ed_name"
-        android:background="@drawable/logintxtfield_border"
-
-        android:id="@+id/ed_username"
-        android:hint="User Name"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        />
-
-
-    <EditText
-        android:id="@+id/ed_phoneNo"
-        android:layout_below="@id/ed_username"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:paddingLeft="10dp"
-        android:layout_centerHorizontal="true"
-        android:hint="+92xxx-xxxxxxx"
-        android:inputType="phone"
-        android:layout_marginTop="15dp"
-        android:textSize="15sp"
-        android:background="@drawable/logintxtfield_border"/>
-    />
-
-    <EditText
-        android:id="@+id/ed_password"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:textSize="15sp"
-        android:paddingLeft="10dp"
-        android:layout_below="@+id/ed_phoneNo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="3dp"
-        android:background="@drawable/logintxtfield_border"
-        android:hint="Password  (9 char atleast)"
-        android:inputType="textPassword"
-        />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:textSize="15sp"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/ed_password"
-        android:background="@drawable/logintxtfield_border"
-        android:id="@+id/ed_confirmpassword"
-        android:hint="Confirm Password"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        android:inputType="textPassword"
-        />
-
-
-    <CheckBox
-        android:id="@+id/check_currentlocation"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ed_confirmpassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:buttonTint="@color/colorGrey"
-        android:checked="true"
-        android:text="User current location"
-        android:textColor="@color/colorlogintext"
-        android:textSize="15sp"
+        android:layout_weight="0.6"
+        android:gravity="clip_vertical|bottom|center"
+        android:orientation="vertical"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imv"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/customer"
+            app:civ_border_color="#00B8B8"
+            app:civ_border_width="2dp"
+            ></de.hdodenhof.circleimageview.CircleImageView>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_pic_gallery"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/imv"
+            android:layout_marginTop="-30dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toRightOf="@+id/imv"
+            android:layout_marginLeft="-20dp"
+            android:background="@drawable/circle_backgound4"
+            android:src="@drawable/ic_baseline_image_white_24"
+            android:text="Upload Profile Picture">
+
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingLeft="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btn_pic_gallery"
+            android:background="@drawable/logintxtfield_border"
+            android:padding="10dp"
+            android:id="@+id/ed_name"
+            android:hint="Full Name"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/logintxtfield_border"
+            android:id="@+id/ed_username"
+            android:hint="User Name"
+            />
+
+
+        <EditText
+            android:id="@+id/ed_phoneNo"
+            android:layout_below="@id/ed_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_centerHorizontal="true"
+            android:hint="+92xxx-xxxxxxx"
+            android:inputType="phone"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:background="@drawable/logintxtfield_border"/><![CDATA[
         />
 
 
-    <Button
-        android:id="@+id/btn_change_location"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="10dp"
-        android:background="@color/colorlogintextfieldborder"
-        android:layout_below="@id/check_currentlocation"
-        android:text="Choose Location"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/colorWhite" />
+
+        ]]>
+
+        <EditText
+            android:id="@+id/ed_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ed_phoneNo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/logintxtfield_border"
+            android:hint="Password  (9 char atleast)"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ed_password"
+            android:background="@drawable/logintxtfield_border"
+            android:id="@+id/ed_confirmpassword"
+            android:hint="Confirm Password"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            />
 
 
+        <CheckBox
+            android:id="@+id/check_currentlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_confirmpassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:buttonTint="@color/colorGrey"
+            android:checked="true"
+            android:text="User current location"
+            android:textColor="@color/mainaccent"
+            android:textSize="20sp"
+            />
+
+
+        <Button
+            android:id="@+id/btn_change_location"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/check_currentlocation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_button_border"
+            android:text="Change Location"
+            android:textSize="15sp"
+            android:textColor="@color/colorWhite" />
+
+
+    </LinearLayout>
 
 
 
@@ -149,28 +171,29 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="3dp"
         android:layout_marginRight="3dp"
+        android:padding="2dp"
         android:id="@+id/last_layout"
        >
 
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:id="@+id/btn_back"
             android:layout_marginTop="10dp"
-            android:background="@drawable/back"
+            android:background="@drawable/left_arrow"
             android:layout_alignParentLeft="true"/>
 
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:id="@+id/btn_Next"
             android:layout_marginTop="10dp"
             android:layout_alignParentRight="true"
-            android:background="@drawable/next"
+            android:background="@drawable/right_arrow"
             android:textColor="@color/colorWhite"
             />
 
 
     </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>

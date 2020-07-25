@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
        btn_customer_signup = findViewById(R.id.button_customer_signup);
        btn_sp_signup= findViewById(R.id.button_sp_signup);
         mfont = Typeface.createFromAsset(this.getAssets(),"fonts/KaushanScript-Regular.otf");
-        tv_title.setTypeface(mfont);
+
 
 
 

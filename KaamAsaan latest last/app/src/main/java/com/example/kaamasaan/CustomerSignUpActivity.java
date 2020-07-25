@@ -48,6 +48,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class CustomerSignUpActivity extends AppCompatActivity {
     EditText fullName,userName,phone,password,confirmpassword;
     TextView countrycode;
@@ -58,7 +60,7 @@ public class CustomerSignUpActivity extends AppCompatActivity {
     private  static final int SELECT_FROM_GALLERY = 1;
     private static final int  CAPTURE_FROM_CAMERA = 2;
     Uri capturedImageUri;
-    AppCompatImageView iv;
+    CircleImageView iv;
 
     FirebaseDatabase database;
     DatabaseReference user_ref;
