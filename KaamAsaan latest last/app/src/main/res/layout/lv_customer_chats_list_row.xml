@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/imageview_border"
+    android:id="@+id/relativelayout_container"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/iv_prof_pic"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        ></androidx.appcompat.widget.AppCompatImageView>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:id="@+id/chat_list_relative_layout"
+        android:background="@drawable/oval_border"
+        android:layout_toRightOf="@+id/iv_prof_pic"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/txt_user_name"
+            android:textStyle="bold"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/txt_user_name"
+            android:layout_marginLeft="2dp"
+            android:textSize="15sp"
+            android:id="@+id/txt_message"
+            android:layout_marginRight="5dp"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_message"
+            android:layout_alignParentRight="true"
+            android:id="@+id/txt_date_time"
+            android:layout_marginRight="5dp"
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceProviderProfileFragment"
+    android:layout_marginBottom="60dp"
+    android:layout_marginTop="60dp"
+    android:background="@color/colorWhite"
+   >
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_prof_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/imageview_border"></androidx.appcompat.widget.AppCompatImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textAlignment="center"
+            android:layout_below="@+id/iv_prof_pic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/txt_name"
+            android:textColor="@color/colorSapphireBlue"
+            android:textSize="20sp"
+            ></TextView>
+
+        <RatingBar
+            android:id="@+id/ratingbar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_prof_pic"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorWhite"
+            android:progressTint="@color/colorYellow"
+            android:numStars="1"
+            android:layout_marginLeft="20dp"
+            style="?android:attr/ratingBarStyleSmall"/>
+        <RatingBar
+            android:id="@+id/ratingbar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:progressTint="@color/colorYellow"
+            android:layout_below="@+id/ratingbar1"
+            android:layout_marginTop="3dp"
+            android:numStars="2"
+            android:layout_marginLeft="20dp"
+            style="?android:attr/ratingBarStyleSmall" />
+        <RatingBar
+            android:id="@+id/ratingbar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:progressTint="@color/colorYellow"
+            android:layout_below="@+id/ratingbar2"
+            android:layout_marginTop="3dp"
+            android:numStars="3"
+            android:layout_marginLeft="20dp"
+            style="?android:attr/ratingBarStyleSmall"/>
+
+        <RatingBar
+            android:id="@+id/ratingbar4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:progressTint="@color/colorYellow"
+            android:layout_below="@+id/ratingbar3"
+            android:layout_marginTop="3dp"
+            android:numStars="4"
+            android:layout_marginLeft="20dp"
+            style="?android:attr/ratingBarStyleSmall" />
+
+        <RatingBar
+            android:id="@+id/ratingbar5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:progressTint="@color/colorYellow"
+            android:layout_below="@+id/ratingbar4"
+            android:layout_marginTop="3dp"
+            android:numStars="5"
+            android:layout_marginLeft="20dp"
+            style="?android:attr/ratingBarStyleSmall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_reviews"
+        android:layout_below="@+id/ratingbar2"
+        android:layout_toRightOf="@+id/ratingbar2"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="60dp"
+        android:text="Reviews:0"
+        android:textColor="@color/colorSapphireBlue"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_pipe"
+        android:layout_below="@+id/ratingbar2"
+        android:layout_toRightOf="@+id/txt_reviews"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="10dp"
+        android:text="|"
+        android:textColor="@color/colorSapphireBlue"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingbar2"
+        android:layout_toRightOf="@+id/txt_pipe"
+        android:id="@+id/txt_jobs"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/colorSapphireBlue"
+        android:text="Jobs:0">
+
+    </TextView>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btn_edit_name"
+       android:layout_centerHorizontal="true"
+        android:src="@drawable/edit_18x18"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/circle_background"
+       android:layout_below="@id/txt_jobs"
+
+        ></ImageButton>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_lbl_reviews"
+        android:layout_below="@+id/ratingbar5"
+        android:text="Reviews:"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorSapphireBlue"
+        android:textAlignment="center"
+        >
+
+    </TextView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_lbl_reviews"
+        android:layout_marginTop="5dp"
+        android:id="@+id/lv_reviews"
+        android:dividerHeight="5dp"
+
+        ></ListView>
+
+
+</RelativeLayout>

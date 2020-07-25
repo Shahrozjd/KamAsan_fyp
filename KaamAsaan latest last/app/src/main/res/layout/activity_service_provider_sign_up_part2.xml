@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceProviderSignUpPart2Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Provider Sign Up"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:id="@+id/tv_title_signup2"
+        android:textColor="@color/colorSapphireBlue"
+        />
+
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/item_scrollvw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_signup2"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativelayout2"
+            android:layout_below="@+id/tv_title_signup2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Category"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+               android:textAlignment="textStart"
+                android:id="@+id/txt_lbl_category"
+                android:textColor="@color/colorSapphireBlue"
+                />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_below="@+id/txt_lbl_category"
+                android:id="@+id/list_categories"
+
+                ></ListView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_scrollvw"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/imageview_border">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl_radius"
+            android:layout_marginTop="5dp"
+
+            android:max="5"
+            android:min="1"
+            android:progress="2" />
+
+        <TextView
+            android:id="@+id/lbl_radius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_lbl_op_radius"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:text="Radius:"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/radius_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_lbl_op_radius"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@id/lbl_radius"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/lbl_km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_lbl_op_radius"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@id/radius_value"
+            android:text="KM"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/txt_lbl_op_radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Operational Radius"
+            android:textColor="@color/colorSapphireBlue"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="3dp"
+        android:id="@+id/last_layout"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/btn_back"
+            android:background="@color/colorSapphireBlue"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/btn_Next"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorSapphireBlue"
+            android:textColor="@color/colorWhite"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

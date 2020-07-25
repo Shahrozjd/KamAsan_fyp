@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_scrollvw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/tv_title_signup2"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:background="@drawable/imageview_border">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BroadCast Details"
+        android:id="@+id/title"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="2dp"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/broadcasts_notification_textview_background"
+        ></TextView>
+
+
+    <TextView
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:text="BroadCast ID:"
+        android:id="@+id/lbl_broadcast_req_id"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="2dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorSapphireBlue"
+        android:background="@drawable/imageview_border"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_broadcast_req_id"
+        android:layout_toRightOf="@+id/lbl_broadcast_req_id"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="2dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorSapphireBlue"
+        android:background="@drawable/imageview_border"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/lbl_broadcast_title"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_broadcast_req_id"
+        android:layout_marginLeft="2dp"
+
+        android:text="Title:"
+        android:textColor="@color/colorSapphireBlue"
+        android:textSize="15sp"
+        android:background="@drawable/imageview_border"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_broadcast_title"
+        android:layout_below="@+id/lbl_broadcast_req_id"
+
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_toRightOf="@+id/lbl_broadcast_title"
+        android:textSize="15sp"
+        android:textColor="@color/colorSapphireBlue"
+        android:background="@drawable/imageview_border"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/lbl_broadcast_description"
+        android:layout_width="118dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/lbl_broadcast_title"
+        android:layout_marginLeft="2dp"
+
+        android:text="Description:"
+        android:textColor="@color/colorSapphireBlue"
+        android:textSize="15sp"
+        android:background="@drawable/imageview_border"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/txt_broadcast_description"
+        android:layout_below="@+id/lbl_broadcast_title"
+
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_toRightOf="@+id/lbl_broadcast_description"
+        android:textSize="15sp"
+        android:textColor="@color/colorSapphireBlue"
+        android:background="@drawable/imageview_border"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/lbl_sp_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_broadcast_description"
+        android:layout_marginLeft="2dp"
+
+        android:background="@drawable/imageview_border"
+        android:text="Service Category:"
+        android:textColor="@color/colorSapphireBlue"
+        android:textSize="15sp"
+
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_sp_category"
+        android:layout_below="@+id/lbl_broadcast_description"
+
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_toRightOf="@+id/lbl_sp_category"
+        android:textSize="15sp"
+        android:textColor="@color/colorSapphireBlue"
+        android:background="@drawable/imageview_border"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/lbl_broadcast_location"
+        android:layout_width="118dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/lbl_sp_category"
+        android:layout_marginLeft="2dp"
+        android:text="Location:"
+        android:textColor="@color/colorSapphireBlue"
+        android:textSize="15sp"
+        android:background="@drawable/imageview_border"
+        ></TextView>
+
+
+
+
+    <TextView
+        android:id="@+id/txt_broadcast_location"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/lbl_sp_category"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="0dp"
+
+        android:layout_marginRight="2dp"
+        android:layout_toRightOf="@+id/lbl_broadcast_location"
+        android:background="@drawable/imageview_border"
+        android:textColor="@color/colorSapphireBlue"
+        android:textSize="15sp"></TextView>
+
+    <TextView
+        android:id="@+id/lbl_customername"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_broadcast_location"
+        android:layout_marginLeft="2dp"
+        android:text="Customer:"
+        android:textColor="@color/colorSapphireBlue"
+        android:textSize="15sp"
+        android:background="@drawable/imageview_border"
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_customername"
+        android:layout_below="@id/lbl_broadcast_location"
+        android:layout_toRightOf="@id/lbl_customername"
+        android:textSize="15sp"
+        android:layout_marginLeft="3dp"
+        android:textColor="@color/colorSapphireBlue"
+        android:background="@drawable/imageview_border"
+></TextView>
+
+
+    <TextView
+        android:id="@+id/lbl_number_of_sp_visiting"
+        android:layout_width="118dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/lbl_customername"
+        android:layout_marginLeft="2dp"
+        android:text="Service Providers willing to visit: "
+        android:gravity="bottom"
+        android:textColor="@color/colorSapphireBlue"
+        android:textSize="15sp"
+        android:background="@drawable/imageview_border"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/txt_number_of_sp_visiting"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/lbl_customername"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="2dp"
+        android:layout_toRightOf="@+id/lbl_number_of_sp_visiting"
+        android:textStyle="bold"
+        android:textColor="@color/colorSapphireBlue"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:paddingTop="15dp"
+        android:background="@drawable/imageview_border"
+        ></TextView>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/lbl_number_of_sp_visiting"
+        android:id="@+id/iv1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/imageview_border"
+        android:scaleType="fitXY"
+        ></androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/lbl_number_of_sp_visiting"
+        android:layout_toRightOf="@+id/iv1"
+        android:id="@+id/iv2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/imageview_border"
+        android:scaleType="fitXY"
+        ></androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/lbl_number_of_sp_visiting"
+        android:layout_toRightOf="@+id/iv2"
+        android:id="@+id/iv3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/imageview_border"
+        android:scaleType="fitXY"
+        ></androidx.appcompat.widget.AppCompatImageView>
+
+
+
+
+
+    <LinearLayout
+       android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Send Visit Request"
+            android:id="@+id/btn_send_visit_request"
+            android:layout_marginBottom="3dp"
+            android:background="@color/colorSapphireBlue"
+            android:textColor="@color/colorWhite"
+            ></Button>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_send_message"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorSapphireBlue"
+            android:src="@drawable/chat_message"
+            android:layout_marginBottom="3dp"
+            ></androidx.appcompat.widget.AppCompatImageButton>
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorSapphireBlue"
+            android:layout_marginBottom="3dp"
+            android:text="Close"></Button>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+</ScrollView>

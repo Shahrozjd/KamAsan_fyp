@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/imageview_border"
+    >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorWhite"
+        android:src="@drawable/delete"
+        android:layout_marginRight="2dp"
+        android:id="@+id/btn_close"
+        >
+
+    </ImageButton>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/iv"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/imageview_border"
+        android:scaleType="fitXY"
+        ></androidx.appcompat.widget.AppCompatImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/iv"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/txt_username"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        ></TextView>
+
+    <RatingBar
+        android:id="@+id/ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="40dp"
+        android:numStars="5"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        style="?android:attr/ratingBarStyleSmall"
+        android:progressTint="@color/colorYellow"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_review"
+        android:layout_below="@+id/iv"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/oval_border"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        ></TextView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imageview_border">
+
+    <RatingBar
+        android:id="@+id/response_ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:numStars="5"
+        android:layout_marginLeft="20dp"
+        android:stepSize="1.0"
+        android:progressTint="@color/colorYellow"
+
+         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:background="@drawable/button_background"
+        android:layout_below="@+id/response_ratingbar"
+        android:layout_marginTop="20dp"
+        android:text="OK"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:id="@+id/response_rating_ok_button"
+        android:layout_marginBottom="2dp"
+        ></Button>
+
+
+</RelativeLayout>

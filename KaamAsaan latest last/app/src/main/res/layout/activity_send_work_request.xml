@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_scrollvw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/tv_title_signup2"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SendVisitRequestActivity"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Work Request"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorSapphireBlue"
+            android:id="@+id/txt_visit_request_title"
+            >
+        </TextView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txt_visit_request_title"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_layout_time"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/visit_request_views_border"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorSapphireBlue"
+                    android:background="@color/colorWhite"
+                    android:id="@+id/lbl_time"
+                    android:layout_marginTop="20dp"
+                    >
+                </TextView>
+
+                <DatePicker
+                    android:id="@+id/start_date"
+                    style="@style/timepickerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"></DatePicker>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_layout_date"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/visit_request_views_border"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="End Date"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorSapphireBlue"
+                    android:background="@color/colorWhite"
+                    android:id="@+id/lbl_date"
+                    android:layout_marginTop="10dp"
+                    >
+                </TextView>
+
+                <DatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:id="@+id/end_date"
+                    style="@style/timepickerStyle"
+                    ></DatePicker>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_layout_duration"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/visit_request_views_border"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Work Mode"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorSapphireBlue"
+                    android:background="@color/colorWhite"
+                    android:id="@+id/lbl_mode"
+                    android:layout_marginTop="10dp"
+                    >
+                </TextView>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+                    android:weightSum="1"
+                    android:id="@+id/radio_group"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OnSite"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/radio_onsite"
+                        android:checked="true"
+                        />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OffSite"
+                        android:textSize="20sp"
+                        android:layout_below="@id/radio_onsite"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/radio_offsite"
+                        />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_layout_cost"
+                android:orientation="vertical"
+                android:background="@drawable/visit_request_views_border"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estimated Cost"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorSapphireBlue"
+                    android:background="@color/colorWhite"
+                    android:id="@+id/lbl_cost"
+                    android:layout_marginTop="10dp"
+                    ></TextView>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ed_cost"
+                    android:layout_marginBottom="2dp"
+                    android:inputType="number"
+                    android:background="@drawable/oval_border"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:paddingLeft="5dp"
+                    >
+
+                </EditText>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_send_work_request"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/button_background"
+                android:text="Send"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:textStyle="bold"></Button>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

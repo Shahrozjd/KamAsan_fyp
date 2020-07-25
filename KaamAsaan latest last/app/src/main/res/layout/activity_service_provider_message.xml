@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerMessageActivity"
+    android:background="@color/colorSkyBlue">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_layout_lv"
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSapphireBlue"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme"
+            app:titleTextColor="@color/colorWhite"
+
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/lv_chats"
+            android:dividerHeight="10sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="100dp"
+            android:divider="@color/colorSkyBlue"
+
+            ></ListView>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/linear_layout_ed_text"
+        android:orientation="vertical"
+
+        android:layout_above="@+id/relativelayout_buttons">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Type message"
+            android:id="@+id/ed_message"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/imageview_border"
+            android:gravity="top"
+
+            >
+
+        </EditText>
+
+    </LinearLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativelayout_buttons"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/linear_layout_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:text="Send"
+                android:textColor="@color/colorWhite"
+
+                ></Button>
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_background"
+                android:text="Cancel"
+                android:textColor="@color/colorWhite"
+
+                ></Button>
+            <Button
+                android:id="@+id/btn_send_visit_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_background"
+                android:text="Send Visit Request"
+                android:textColor="@color/colorWhite"
+
+                ></Button>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

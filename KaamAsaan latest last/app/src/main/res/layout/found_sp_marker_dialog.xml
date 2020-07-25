@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imageview_border"
+    >
+
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_name"
+        android:textSize="12sp"
+        android:textColor="@color/colorSapphireBlue"
+        android:layout_marginLeft="2dp"
+        ></TextView>
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_profession"
+        android:textSize="12sp"
+        android:layout_below="@id/txt_name"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorSapphireBlue"
+        android:layout_marginLeft="2dp"
+        ></TextView>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:id="@+id/txt_bio"
+        android:layout_below="@+id/txt_profession"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorSapphireBlue"
+        android:layout_marginLeft="2dp"
+        ></TextView>
+
+
+    <ImageButton
+        android:id="@+id/btn_chat"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/txt_bio"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/colorSapphireBlue"
+        android:src="@drawable/chat_message"
+        android:textAlignment="center"></ImageButton>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorSapphireBlue"
+        android:text="Cancel"
+        android:layout_toRightOf="@+id/btn_chat"
+        android:layout_below="@+id/txt_bio"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/btn_cancel"
+
+        ></Button>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorSapphireBlue"
+        android:text="Visit Profile"
+        android:layout_toRightOf="@+id/btn_cancel"
+        android:layout_below="@+id/txt_bio"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/btn_profile"
+
+        ></Button>
+
+
+    <TextView
+        android:id="@+id/lbl_job"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="97dp"
+        android:layout_toRightOf="@+id/txt_name"
+        android:text="Jobs:"
+        android:textColor="@color/colorSapphireBlue"
+        android:textSize="12sp"></TextView>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/txt_name"
+        android:layout_marginLeft="100dp"
+        android:text="Rating:"
+        android:textColor="@color/colorSapphireBlue"
+        android:layout_below="@id/txt_name"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lbl_rating"
+        android:textSize="12sp"
+        ></TextView>
+
+
+</RelativeLayout>

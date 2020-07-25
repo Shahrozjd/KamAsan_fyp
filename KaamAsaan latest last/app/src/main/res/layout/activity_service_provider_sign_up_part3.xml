@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceProviderSignUpPart3Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Provider Sign Up"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:id="@+id/tv_title_signup3"
+        android:textColor="@color/colorSapphireBlue"
+        />
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/tv_title_signup3"
+           android:layout_marginTop="10dp"
+           android:id="@+id/layout_time"
+           android:background="@drawable/imageview_border">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Availability Time"
+               android:textSize="20sp"
+               android:textAlignment="center"
+               android:id="@+id/tv_title_tme"
+               android:textColor="@color/colorSapphireBlue"
+               />
+
+           <EditText
+               android:layout_width="40dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/start_hours"
+               android:layout_below="@+id/tv_title_tme"
+               android:background="@drawable/imageview_border"
+               android:textSize="20sp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="5dp"
+               android:inputType="number"
+               android:layout_marginBottom="3dp"
+               android:maxLength="2"
+
+
+               />
+           <EditText
+               android:layout_width="40dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/start_minutes"
+               android:layout_below="@+id/tv_title_tme"
+               android:layout_toRightOf="@+id/start_hours"
+               android:layout_marginLeft="5dp"
+               android:textSize="20sp"
+               android:background="@drawable/imageview_border"
+               android:layout_marginTop="5dp"
+               android:inputType="number"
+               android:layout_marginBottom="3dp"
+               android:maxLength="2"
+               />
+
+           <Spinner
+               android:id="@+id/spinnerFrom"
+               android:layout_width="60dp"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/tv_title_tme"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="5dp"
+               android:layout_toRightOf="@+id/start_minutes"
+               android:popupBackground="#ffffff"></Spinner>
+
+           <TextView
+               android:layout_width="30dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/tv_colon"
+               android:layout_below="@+id/tv_title_tme"
+               android:layout_toRightOf="@+id/spinnerFrom"
+               android:layout_marginLeft="5dp"
+               android:textSize="20sp"
+               android:textAlignment="center"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="3dp"
+               android:text=":"/>
+
+           <EditText
+               android:layout_width="40dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/end_hours"
+               android:layout_below="@+id/tv_title_tme"
+               android:layout_toRightOf="@+id/tv_colon"
+               android:layout_marginLeft="5dp"
+               android:textSize="20sp"
+               android:background="@drawable/imageview_border"
+               android:layout_marginTop="5dp"
+               android:inputType="number"
+               android:layout_marginBottom="3dp"
+               android:maxLength="2"
+               />
+
+           <EditText
+               android:layout_width="40dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/end_minutes"
+               android:layout_below="@+id/tv_title_tme"
+               android:layout_toRightOf="@+id/end_hours"
+               android:layout_marginLeft="5dp"
+               android:textSize="20sp"
+               android:background="@drawable/imageview_border"
+               android:layout_marginTop="5dp"
+               android:inputType="number"
+               android:layout_marginBottom="3dp"
+               android:maxLength="2"
+               />
+           <Spinner
+               android:id="@+id/spinnerTo"
+               android:layout_width="60dp"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/tv_title_tme"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="5dp"
+               android:layout_toRightOf="@+id/end_minutes"
+               android:popupBackground="#ffffff"></Spinner>
+
+       </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_visitcost"
+        android:layout_below="@+id/layout_time"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/imageview_border"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Visit Cost"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:id="@+id/tv_title_visitcost"
+            android:textColor="@color/colorSapphireBlue"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_visitcost"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/imageview_border"
+            android:inputType="number"
+            android:id="@+id/ed_visitcost"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_responsetime"
+        android:layout_below="@+id/layout_visitcost"
+       android:layout_marginTop="0dp"
+        android:background="@drawable/imageview_border">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Response Time"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:id="@+id/tv_title_responseTime"
+            android:textColor="@color/colorSapphireBlue"
+            />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_responseTime"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+            <RadioButton
+                android:id="@+id/radio_30min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title_responseTime"
+                android:layout_marginTop="3dp"
+                android:checked="true"
+                android:text="30 minutes" />
+
+            <RadioButton
+                android:id="@+id/radio_1hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_30min"
+                android:layout_marginTop="2dp"
+                android:text="1 hour" />
+
+            <RadioButton
+                android:id="@+id/radio_1.5hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_1hour"
+                android:layout_marginTop="2dp"
+                android:text="1.5 hours" />
+
+            <RadioButton
+                android:id="@+id/radio_2hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_1.5hour"
+                android:layout_marginTop="2dp"
+                android:text="2 hours" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_bio"
+        android:layout_below="@+id/layout_responsetime"
+        android:background="@drawable/imageview_border"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title_bio"
+            android:text="Bio"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="@color/colorSapphireBlue"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/ed_bio"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_title_bio"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/imageview_border"
+            android:layout_marginBottom="3dp"
+            android:hint="Min characters: 50 and Max characters: 300"
+            android:maxLength="300"
+
+
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_below="@id/layout_bio"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/last_layout"
+        android:background="@drawable/imageview_border"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/btn_back"
+            android:background="@color/colorSapphireBlue"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:id="@+id/btn_signup"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorSapphireBlue"
+            android:textColor="@color/colorWhite"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

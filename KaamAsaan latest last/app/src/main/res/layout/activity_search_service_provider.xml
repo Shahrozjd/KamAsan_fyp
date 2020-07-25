@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchServiceProviderActivity"
+    android:background="@color/colorWhite">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Search Service Providers"
+    android:textAlignment="center"
+    android:textColor="@color/colorSapphireBlue"
+    android:id="@+id/lbl_search"
+
+    ></TextView>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sv"
+        android:layout_below="@+id/lbl_search"
+        android:queryHint="Search Category"
+        ></SearchView>
+
+    <ListView
+        android:id="@+id/list_categories"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_below="@+id/sv"
+        android:layout_marginTop="1dp"
+
+
+        ></ListView>
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/list_categories"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/img_btn_mobile_repairing"
+        android:src="@drawable/mobilerepairing100x100"
+       android:outlineAmbientShadowColor="@color/colorAccent"
+        ></ImageButton>
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/img_btn_electrician"
+        android:layout_below="@id/list_categories"
+        android:layout_toRightOf="@id/img_btn_mobile_repairing"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/electrician100x100"
+        ></ImageButton>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/img_btn_washerman"
+        android:layout_below="@id/list_categories"
+        android:layout_toRightOf="@id/img_btn_electrician"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/washerman100x100"
+        ></ImageButton>
+
+     <androidx.appcompat.widget.AppCompatCheckBox
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/chk_mobile"
+         android:layout_below="@+id/img_btn_mobile_repairing"
+         android:layout_marginTop="5dp"
+         android:text="Mobile Repair"
+
+         ></androidx.appcompat.widget.AppCompatCheckBox>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chk_electrician"
+        android:layout_below="@+id/img_btn_mobile_repairing"
+        android:layout_toRightOf="@+id/chk_mobile"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:text="Electrician"
+        ></androidx.appcompat.widget.AppCompatCheckBox>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chk_washerMan"
+        android:layout_below="@+id/img_btn_mobile_repairing"
+        android:layout_toRightOf="@+id/chk_electrician"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:text="Washer Man"
+        ></androidx.appcompat.widget.AppCompatCheckBox>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_search"
+        android:text="Search"
+        android:textAlignment="center"
+        android:background="@color/colorSapphireBlue"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        ></Button>
+
+
+</RelativeLayout>

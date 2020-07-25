@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerSignUpActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer Sign Up"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:id="@+id/tv_title_customer_signup"
+        android:textColor="@color/colorSapphireBlue"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_title_customer_signup"
+        android:background="@drawable/imageview_border"
+        android:textSize="20sp"
+        android:id="@+id/ed_customer_name"
+        android:hint="Full Name"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/ed_customer_name"
+        android:background="@drawable/imageview_border"
+        android:textSize="20sp"
+        android:id="@+id/ed_customer_username"
+        android:hint="User Name"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_customer_country_code"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed_customer_username"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/imageview_border"
+        android:textSize="20sp" />
+    />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/ed_customer_username"
+        android:layout_toRightOf="@id/tv_customer_country_code"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/imageview_border"
+        android:textSize="20sp"
+        android:id="@+id/ed__customer_phoneNo"
+        android:hint="Phone No  10 digits"
+        android:layout_marginRight="3dp"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/ed__customer_phoneNo"
+        android:background="@drawable/imageview_border"
+        android:textSize="20sp"
+        android:id="@+id/ed_customer_password"
+        android:hint="Password   atleast 9 characters"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/ed_customer_password"
+        android:background="@drawable/imageview_border"
+        android:textSize="20sp"
+        android:id="@+id/ed_customer_confirmpassword"
+        android:hint="Confirm Password"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:inputType="textPassword"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/ed_customer_confirmpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/imageview_border"
+        app:srcCompat="@drawable/defaultprofileimage"
+        android:scaleType="fitXY"></androidx.appcompat.widget.AppCompatImageView>
+
+
+    <LinearLayout
+        android:layout_below="@id/imv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_pic_gallery"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/circle_background2"
+            android:src="@drawable/upload18x18"
+            android:text="Upload Profile Picture"></androidx.appcompat.widget.AppCompatImageButton>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_pic_camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/circle_background2"
+            android:src="@drawable/camera18x18"
+            android:layout_marginBottom="3dp"
+            android:text="Upload Profile Picture"></androidx.appcompat.widget.AppCompatImageButton>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_rotate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/circle_background2"
+            android:src="@drawable/rotation18x18"
+            android:layout_marginBottom="3dp"
+            android:text="Upload Profile Picture"></androidx.appcompat.widget.AppCompatImageButton>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorSapphireBlue"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:text="Sign Up"
+        android:id="@+id/btn_customer_signup"
+        ></Button>
+
+
+
+
+</RelativeLayout>

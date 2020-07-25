@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceProviderSignUpPart1Activity"
+    android:background="@color/colorWhite">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/defaultprofileimage"
+        app:civ_border_color="#00B8B8"
+        app:civ_border_width="2dp"
+       ></de.hdodenhof.circleimageview.CircleImageView>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_pic_gallery"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/imv"
+        android:layout_marginTop="-30dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toRightOf="@+id/imv"
+        android:layout_marginLeft="-20dp"
+        android:background="@drawable/circle_backgound4"
+
+        android:text="Upload Profile Picture"></androidx.appcompat.widget.AppCompatImageButton>
+
+       <EditText
+           android:layout_width="200dp"
+           android:layout_height="30dp"
+           android:textSize="15sp"
+           android:paddingLeft="10dp"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="10dp"
+           android:layout_below="@+id/btn_pic_gallery"
+           android:background="@drawable/logintxtfield_border"
+
+           android:id="@+id/ed_name"
+           android:hint="Full Name"
+           android:layout_marginLeft="3dp"
+           android:layout_marginRight="3dp"
+           />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ed_name"
+        android:background="@drawable/logintxtfield_border"
+
+        android:id="@+id/ed_username"
+        android:hint="User Name"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        />
+
+
+    <EditText
+        android:id="@+id/ed_phoneNo"
+        android:layout_below="@id/ed_username"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="+92xxx-xxxxxxx"
+        android:inputType="phone"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:background="@drawable/logintxtfield_border"/>
+    />
+
+    <EditText
+        android:id="@+id/ed_password"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/ed_phoneNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/logintxtfield_border"
+        android:hint="Password  (9 char atleast)"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ed_password"
+        android:background="@drawable/logintxtfield_border"
+        android:id="@+id/ed_confirmpassword"
+        android:hint="Confirm Password"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:inputType="textPassword"
+        />
+
+
+    <CheckBox
+        android:id="@+id/check_currentlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_confirmpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:buttonTint="@color/colorGrey"
+        android:checked="true"
+        android:text="User current location"
+        android:textColor="@color/colorlogintext"
+        android:textSize="15sp"
+        />
+
+
+    <Button
+        android:id="@+id/btn_change_location"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorlogintextfieldborder"
+        android:layout_below="@id/check_currentlocation"
+        android:text="Choose Location"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite" />
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="3dp"
+        android:id="@+id/last_layout"
+       >
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_back"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_Next"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/next"
+            android:textColor="@color/colorWhite"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
