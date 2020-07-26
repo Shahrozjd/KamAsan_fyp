@@ -40,6 +40,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -155,7 +157,7 @@ public class ServiceProviderProfileFragment extends Fragment {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             convertView = getActivity().getLayoutInflater().inflate(R.layout.review_list_row,null);
-            AppCompatImageView iv = convertView.findViewById(R.id.iv);
+            CircleImageView iv = convertView.findViewById(R.id.iv);
             TextView txt_name = convertView.findViewById(R.id.txt_username);
             final TextView txt_review = convertView.findViewById(R.id.txt_review);
             RatingBar ratingBar =convertView.findViewById(R.id.ratingbar);

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:visibility="visible"
-    android:background="@drawable/rounded_corner_border">
+    android:background="@drawable/list_border_layout">
 
 
     <TextView
@@ -14,8 +14,9 @@
         android:text="Request Id:"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         >
 
 
@@ -28,8 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         />
 
     <TextView
@@ -40,8 +41,12 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:text="From:"
-        android:textColor="@color/colorWhite"
-        android:textSize="15sp"></TextView>
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
+        >
+
+    </TextView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,10 +54,10 @@
         android:id="@+id/txt_from"
         android:layout_below="@+id/lbl_received_visit_request_Id"
         android:layout_toRightOf="@+id/lbl_from"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
 
@@ -63,9 +68,10 @@
         android:layout_below="@+id/lbl_from"
         android:text="Start Date:"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
     <TextView
         android:layout_width="wrap_content"
@@ -73,10 +79,10 @@
         android:id="@+id/txt_startDate"
         android:layout_below="@+id/lbl_from"
         android:layout_toRightOf="@id/lbl_startDate"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
     <TextView
@@ -86,9 +92,10 @@
         android:layout_below="@+id/lbl_startDate"
         android:layout_marginLeft="5dp"
         android:text="End Date"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
     <TextView
         android:layout_width="wrap_content"
@@ -98,7 +105,8 @@
         android:layout_toRightOf="@id/lbl_endDate"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
     <TextView
@@ -108,7 +116,9 @@
         android:layout_below="@id/lbl_endDate"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         android:text="Mode"
         ></TextView>
     <TextView
@@ -119,7 +129,8 @@
         android:layout_toRightOf="@id/lbl_mode"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
     <TextView
@@ -130,8 +141,12 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:text="Estimated Cost:"
-        android:textColor="@color/colorWhite"
-        android:textSize="15sp"></TextView>
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
+        >
+
+    </TextView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -145,33 +160,42 @@
         android:textColor="@color/colorWhite"
         ></TextView>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:id="@+id/btn_accept_work_request"
-        android:text="Accept"
-        android:layout_marginLeft="5dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginTop="5dp"
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/notification_button_background"
-        android:textColor="@color/colorSapphireBlue"
+        android:padding="5dp"
         android:layout_below="@+id/lbl_estimated_cost"
-        android:textSize="15sp"
-        ></Button>
+        android:gravity="center"
+        >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:id="@+id/btn_reject_work_request"
-        android:text="Reject"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/notification_button_background"
-        android:textColor="@color/colorSapphireBlue"
-        android:layout_below="@+id/lbl_estimated_cost"
-        android:textSize="15sp"
-        ></Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/btn_accept_work_request"
+            android:text="Accept"
+            android:background="@drawable/login_button_border"
+            android:textColor="@color/colorWhite"
+            android:padding="5dp"
+            android:textSize="15sp"
+            ></Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/btn_reject_work_request"
+            android:text="Reject"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/login_button_border"
+            android:textColor="@color/colorWhite"
+            android:padding="5dp"
+            android:layout_below="@+id/lbl_estimated_cost"
+            android:textSize="15sp"
+            ></Button>
+
+
+    </LinearLayout>
 
 
 

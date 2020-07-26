@@ -32,6 +32,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -46,7 +48,7 @@ public class CustomerProfileFragment extends Fragment {
     TextView txtName,txtJobs,txtReviews;;
     ImageButton imageButton;
     Typeface mfont;
-    AppCompatImageView imv;
+    CircleImageView imv;
     ArrayList<WorkRating> alWorkRating;
     ListView lv_reviews;
     RatingBar ratingBar1,ratingBar2,ratingBar3,ratingBar4,ratingBar5;
@@ -138,7 +140,7 @@ public class CustomerProfileFragment extends Fragment {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             convertView = getActivity().getLayoutInflater().inflate(R.layout.review_list_row,null);
-            AppCompatImageView iv = convertView.findViewById(R.id.iv);
+            CircleImageView iv = convertView.findViewById(R.id.iv);
             TextView txt_name = convertView.findViewById(R.id.txt_username);
             final TextView txt_review = convertView.findViewById(R.id.txt_review);
             RatingBar ratingBar =convertView.findViewById(R.id.ratingbar);

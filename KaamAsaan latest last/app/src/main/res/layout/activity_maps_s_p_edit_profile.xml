@@ -22,7 +22,9 @@
         android:text="Save"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:background="@color/colorSapphireBlue"
+        android:background="@color/mainaccent"
+        android:textSize="18dp"
+        android:textStyle="bold"
         android:textColor="@color/colorWhite"/>
 
     <Button
@@ -32,7 +34,9 @@
         android:text="Cancel"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@color/colorSapphireBlue"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="@color/mainaccent"
         android:textColor="@color/colorWhite"/>
 
 </RelativeLayout>

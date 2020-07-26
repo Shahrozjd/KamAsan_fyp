@@ -2,7 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/rounded_corner_border"
+    android:background="@drawable/list_border_layout"
    >
 
     <TextView
@@ -12,8 +12,9 @@
         android:id="@+id/lbl_broadcast_req_id"
         android:layout_marginTop="2dp"
         android:layout_marginLeft="2dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         >
     </TextView>
 
@@ -24,8 +25,8 @@
         android:layout_toRightOf="@+id/lbl_broadcast_req_id"
         android:layout_marginTop="2dp"
         android:layout_marginLeft="2dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         >
     </TextView>
 
@@ -37,8 +38,11 @@
         android:layout_marginLeft="2dp"
         android:layout_marginTop="5dp"
         android:text="Subject:"
-        android:textColor="@color/colorWhite"
-        android:textSize="15sp"></TextView>
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent">
+
+    </TextView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,8 +52,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="3dp"
         android:layout_toRightOf="@+id/lbl_broadcast_title"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         android:maxLines="1"
         android:ellipsize="end"
         >
@@ -63,10 +67,12 @@
         android:layout_marginLeft="2dp"
         android:text="Service Category:"
         android:layout_marginTop="5dp"
-        android:textColor="@color/colorWhite"
-        android:textSize="15sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
+        >
 
-        ></TextView>
+    </TextView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,22 +82,24 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="3dp"
         android:layout_toRightOf="@+id/lbl_sp_category"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         >
     </TextView>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="30dp"
+        android:padding="5dp"
         android:id="@+id/btn_details"
         android:layout_below="@+id/lbl_sp_category"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="2dp"
         android:text="Click to view details"
         android:textSize="15sp"
-        android:textColor="@color/colorSapphireBlue"
-       android:background="@drawable/notification_button_background"
+        android:layout_margin="5dp"
+        android:textColor="@color/colorWhite"
+       android:background="@drawable/login_button_border"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="2dp"
         >

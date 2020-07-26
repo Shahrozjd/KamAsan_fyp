@@ -21,10 +21,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="View on Map"
-        android:background="@color/colorSapphireBlue"
+        android:background="@color/mainaccent"
         android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:textStyle="bold"
         android:id="@+id/btn_view_in_map"
-        ></Button>
+        >
+    </Button>
 
 
 

@@ -38,10 +38,12 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class EditCustomerProfileActivity extends AppCompatActivity {
     EditText ed_name,ed_phone,ed_password;
     Button btn_save;
-    AppCompatImageView iv;
+    CircleImageView iv;
     FirebaseDatabase database;
     DatabaseReference customer_ref;
     AppCompatImageButton btn_pic_gallery;

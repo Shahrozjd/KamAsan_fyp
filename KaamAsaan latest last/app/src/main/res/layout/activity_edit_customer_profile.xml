@@ -1,142 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".EditCustomerProfileActivity">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Edit Profile"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColor="@color/colorSapphireBlue"
-        android:background="@drawable/imageview_border"
-        android:id="@+id/tv_title_edit_customer_profile"
-        >
-    </TextView>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/iv"
-        android:layout_below="@id/tv_title_edit_customer_profile"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/imageview_border"
-        android:scaleType="fitXY"
-        ></androidx.appcompat.widget.AppCompatImageView>
 
     <LinearLayout
-        android:layout_below="@id/iv"
-        android:layout_width="fill_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:id="@+id/linear_layout_pic"
-        android:gravity="center">
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="clip_vertical|bottom|center"
+        android:layout_weight="0.2"
+        android:paddingTop="40dp"
+        >
+
+        <LinearLayout
+            android:layout_below="@id/imv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="invisible"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+            <!--            android:id="@+id/btn_pic_gallery"-->
+            <androidx.appcompat.widget.AppCompatImageButton
+
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/circle_background2"
+                android:text="Upload Profile Picture">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_pic_camera"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/circle_background2"
+                android:layout_marginBottom="3dp"
+                android:text="Upload Profile Picture">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_rotate"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/circle_background2"
+                android:layout_marginBottom="3dp"
+                android:text="Upload Profile Picture">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+
+        </LinearLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:text="Upload Profile Picture"
+            android:src="@drawable/customer"
+            app:civ_border_color="@color/mainaccent"
+            app:civ_border_width="2dp"
+            >
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btn_pic_gallery"
-            android:background="@drawable/circle_background2"
-            android:src="@drawable/upload18x18"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="-30dp"
             android:layout_marginBottom="3dp"
-            ></androidx.appcompat.widget.AppCompatImageButton>
+            android:layout_marginRight="-40dp"
+            android:background="@drawable/circle_backgound4"
+            android:layout_below="@+id/imv"
+            android:layout_toRightOf="@+id/imv"
+            android:src="@drawable/ic_baseline_image_white_24"
+            android:text="Upload Profile Picture">
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btn_pic_camera"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/circle_background2"
-            android:src="@drawable/camera18x18"
-            android:layout_marginBottom="3dp"
-            android:text="Upload Profile Picture"></androidx.appcompat.widget.AppCompatImageButton>
+        </androidx.appcompat.widget.AppCompatImageButton>
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btn_rotate"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/circle_background2"
-            android:src="@drawable/rotation18x18"
-            android:layout_marginBottom="3dp"
-            android:text="Upload Profile Picture"></androidx.appcompat.widget.AppCompatImageButton>
 
     </LinearLayout>
 
-    <EditText
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ed_name"
-        android:layout_below="@+id/linear_layout_pic"
-        android:textSize="20sp"
-        android:hint="Name"
-        android:background="@drawable/imageview_border"
-        android:textColor="@color/colorAccent"
-
-        >
-    </EditText>
-
-    <TextView
-        android:id="@+id/txt_code"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_below="@+id/ed_name"
-        android:background="@drawable/imageview_border"
-        android:text="92"
-        android:textColor="@color/colorSapphireBlue"
-        android:textSize="20sp"
+        android:orientation="vertical"
+        android:gravity="clip_vertical|top|center"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:layout_weight="0.8"
         >
 
-    </TextView>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ed_phone"
-        android:layout_below="@+id/ed_name"
-        android:layout_toRightOf="@+id/txt_code"
-        android:textSize="20sp"
-        android:hint="Phone No (10 digits)"
-        android:background="@drawable/imageview_border"
-        android:textColor="@color/colorAccent"
-        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ed_name"
+            android:padding="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/linear_layout_pic"
+            android:textSize="18sp"
+            android:hint="Name"
+            android:background="@drawable/logintxtfield_border"
+            android:textColor="#000000"
 
-    </EditText>
-    <EditText
-        android:id="@+id/ed_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ed_phone"
-        android:layout_marginTop="1dp"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp"
-        android:hint="Password"
-        android:background="@drawable/imageview_border"></EditText>
+            >
+        </EditText>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/btn_save"
-        android:text="Save"
-        android:textSize="20sp"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorSapphireBlue"
-        >
+        <TextView
+            android:id="@+id/txt_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ed_name"
+            android:background="@drawable/logintxtfield_border"
+            android:text="92"
+            android:textColor="@color/colorSapphireBlue"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            >
+
+        </TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ed_phone"
+            android:layout_below="@+id/ed_name"
+            android:layout_toRightOf="@+id/txt_code"
+            android:textSize="18sp"
+            android:hint="Phone No (10 digits)"
+            android:background="@drawable/logintxtfield_border"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            >
+
+        </EditText>
+        <EditText
+            android:id="@+id/ed_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_phone"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:hint="Password"
+            android:background="@drawable/logintxtfield_border"
+            android:padding="10dp"
+            >
+
+        </EditText>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_save"
+            android:text="Save"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/login_button_border"
+            android:layout_marginTop="30dp"
+            >
+
+        </Button>
 
 
-    </Button>
+    </LinearLayout>
 
 
 
@@ -145,4 +197,6 @@
 
 
 
-</RelativeLayout>
+
+
+</LinearLayout>

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class ExpandableTextView  extends androidx.appcompat.widget.AppCompatTextView {
     private static final int DEFAULT_TRIM_LENGTH = 100;
-    private static final String ELLIPSIS = ".....SHOW MORE";
+    private static final String ELLIPSIS = ".....SHOW LESS";
 
     private CharSequence originalText;
     private CharSequence trimmedText;
@@ -48,7 +48,7 @@ public class ExpandableTextView  extends androidx.appcompat.widget.AppCompatText
 
     @Override
     public void setText(CharSequence text, BufferType type) {
-        originalText = text+".....SHOW LESS";
+        originalText = text+".....SHOW MORE";
         trimmedText = getTrimmedText(text);
         bufferType = type;
         setText();

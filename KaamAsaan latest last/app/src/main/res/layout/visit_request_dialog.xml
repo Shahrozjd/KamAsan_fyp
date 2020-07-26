@@ -16,8 +16,10 @@
             android:id="@+id/btn_send_visit_request"
             android:layout_width="150dp"
             android:layout_height="30dp"
-            android:background="@drawable/button_background"
+            android:background="@drawable/login_button_border"
             android:text="Send Request"
+            android:textSize="18dp"
+            android:padding="5dp"
             android:textColor="@color/colorWhite"
             ></Button>
 
@@ -26,8 +28,10 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/button_background"
+            android:background="@drawable/login_button_border"
             android:text="Cancel"
+            android:padding="5dp"
+            android:textSize="18dp"
             android:textColor="@color/colorWhite"
 
             ></Button>

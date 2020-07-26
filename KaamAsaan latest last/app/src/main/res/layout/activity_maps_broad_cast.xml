@@ -18,9 +18,10 @@
         android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:textStyle="bold"
+        android:textSize="18dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorSapphireBlue"
+        android:background="@color/mainaccent"
         android:text="OK"
         android:textColor="@color/colorWhite" />
 

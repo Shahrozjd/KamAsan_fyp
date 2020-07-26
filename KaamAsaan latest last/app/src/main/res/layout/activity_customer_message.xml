@@ -78,9 +78,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/messae_send_button"
+                android:layout_marginLeft="2dp"
                 android:textColor="@color/colorWhite"
 
-                ></Button>
+                >
+
+            </Button>
 
         </LinearLayout>
 

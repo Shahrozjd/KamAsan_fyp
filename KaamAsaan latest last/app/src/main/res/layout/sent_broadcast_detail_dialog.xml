@@ -8,8 +8,10 @@
     android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="600dp"
-    android:background="@drawable/imageview_border">
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:paddingBottom="5dp"
+    android:background="@drawable/logintxtfield_border">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,10 +19,12 @@
         android:id="@+id/title"
         android:layout_marginTop="2dp"
         android:layout_marginLeft="2dp"
-        android:textSize="15sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="5dp"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
-        android:background="@drawable/broadcasts_notification_textview_background"
+        android:background="@color/mainaccent"
         ></TextView>
 
 
@@ -32,9 +36,9 @@
         android:layout_below="@+id/title"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="2dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorSapphireBlue"
-        android:background="@drawable/imageview_border"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         >
     </TextView>
 
@@ -47,11 +51,16 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="3dp"
         android:layout_marginRight="2dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorSapphireBlue"
-        android:background="@drawable/imageview_border"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         >
     </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_broadcast_req_id"
+        android:background="@android:color/darker_gray"/>
 
     <TextView
         android:id="@+id/lbl_broadcast_title"
@@ -61,9 +70,12 @@
         android:layout_marginLeft="2dp"
 
         android:text="Title:"
-        android:textColor="@color/colorSapphireBlue"
-        android:textSize="15sp"
-        android:background="@drawable/imageview_border"></TextView>
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
+        >
+
+    </TextView>
 
     <TextView
         android:layout_width="match_parent"
@@ -74,10 +86,15 @@
         android:layout_marginLeft="3dp"
         android:layout_marginRight="2dp"
         android:layout_toRightOf="@+id/lbl_broadcast_title"
-        android:textSize="15sp"
-        android:textColor="@color/colorSapphireBlue"
-        android:background="@drawable/imageview_border"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_broadcast_title"
+        android:background="@android:color/darker_gray"/>
 
     <TextView
         android:id="@+id/lbl_broadcast_description"
@@ -87,9 +104,12 @@
         android:layout_marginLeft="2dp"
 
         android:text="Description:"
-        android:textColor="@color/colorSapphireBlue"
-        android:textSize="15sp"
-        android:background="@drawable/imageview_border"></TextView>
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
+        >
+
+    </TextView>
 
     <TextView
         android:layout_width="match_parent"
@@ -100,10 +120,15 @@
         android:layout_marginLeft="3dp"
         android:layout_marginRight="2dp"
         android:layout_toRightOf="@+id/lbl_broadcast_description"
-        android:textSize="15sp"
-        android:textColor="@color/colorSapphireBlue"
-        android:background="@drawable/imageview_border"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_broadcast_description"
+        android:background="@android:color/darker_gray"/>
 
     <TextView
         android:id="@+id/lbl_sp_category"
@@ -111,11 +136,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/lbl_broadcast_description"
         android:layout_marginLeft="2dp"
-
-        android:background="@drawable/imageview_border"
         android:text="Service Category:"
-        android:textColor="@color/colorSapphireBlue"
-        android:textSize="15sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
 
         ></TextView>
 
@@ -128,10 +152,15 @@
         android:layout_marginLeft="3dp"
         android:layout_marginRight="2dp"
         android:layout_toRightOf="@+id/lbl_sp_category"
-        android:textSize="15sp"
-        android:textColor="@color/colorSapphireBlue"
-        android:background="@drawable/imageview_border"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_sp_category"
+        android:background="@android:color/darker_gray"/>
 
     <TextView
         android:id="@+id/lbl_broadcast_location"
@@ -140,9 +169,9 @@
         android:layout_below="@+id/lbl_sp_category"
         android:layout_marginLeft="2dp"
         android:text="Location:"
-        android:textColor="@color/colorSapphireBlue"
-        android:textSize="15sp"
-        android:background="@drawable/imageview_border"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
 
     <TextView
@@ -154,10 +183,17 @@
         android:layout_marginRight="2dp"
 
         android:layout_toRightOf="@+id/lbl_broadcast_location"
-        android:background="@drawable/imageview_border"
-        android:textColor="@color/colorSapphireBlue"
-        android:textSize="15sp"></TextView>
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        >
 
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_broadcast_location"
+        android:background="@android:color/darker_gray"/>
 
     <TextView
         android:id="@+id/lbl_number_of_sp_visiting"
@@ -167,9 +203,9 @@
         android:layout_marginLeft="2dp"
         android:text="Service Providers willing to visit: "
         android:gravity="bottom"
-        android:textColor="@color/colorSapphireBlue"
-        android:textSize="15sp"
-        android:background="@drawable/imageview_border"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
 
     <TextView
@@ -181,71 +217,90 @@
         android:layout_marginRight="2dp"
        android:layout_toRightOf="@+id/lbl_number_of_sp_visiting"
         android:textStyle="bold"
-        android:textColor="@color/colorSapphireBlue"
-        android:textSize="25sp"
         android:gravity="center_horizontal"
         android:paddingTop="15dp"
-        android:background="@drawable/imageview_border"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/lbl_number_of_sp_visiting"
-        android:id="@+id/iv1"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:background="@drawable/imageview_border"
-        android:scaleType="fitXY"
-        ></androidx.appcompat.widget.AppCompatImageView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txt_number_of_sp_visiting"
+        android:background="@android:color/darker_gray"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/lbl_number_of_sp_visiting"
-        android:layout_toRightOf="@+id/iv1"
-        android:id="@+id/iv2"
+    <LinearLayout
+        android:id="@+id/linearimagebroad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:background="@drawable/imageview_border"
-        android:scaleType="fitXY"
-        ></androidx.appcompat.widget.AppCompatImageView>
+        android:orientation="horizontal"
+        android:layout_below="@+id/lbl_number_of_sp_visiting"
+        android:gravity="center"
+        >
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/lbl_number_of_sp_visiting"
-        android:layout_toRightOf="@+id/iv2"
-        android:id="@+id/iv3"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:background="@drawable/imageview_border"
-        android:scaleType="fitXY"
-        ></androidx.appcompat.widget.AppCompatImageView>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/lbl_number_of_sp_visiting"
+            android:id="@+id/iv1"
+            android:background="@drawable/logintxtfield_border"
+            android:scaleType="fitXY"
+            ></androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/lbl_number_of_sp_visiting"
+            android:layout_toRightOf="@+id/iv1"
+            android:id="@+id/iv2"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/logintxtfield_border"
+            android:scaleType="fitXY"
+            ></androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/lbl_number_of_sp_visiting"
+            android:layout_toRightOf="@+id/iv2"
+            android:id="@+id/iv3"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/logintxtfield_border"
+            android:scaleType="fitXY"
+            ></androidx.appcompat.widget.AppCompatImageView>
+
+
+    </LinearLayout>
 
     <Button
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
+        android:background="@drawable/login_button_border"
         android:textColor="@color/colorWhite"
-        android:layout_below="@+id/iv1"
+        android:layout_below="@+id/linearimagebroad"
         android:layout_centerHorizontal="true"
         android:text="Willingness"
         android:textStyle="bold"
-        android:textSize="15sp"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
         android:id="@+id/btn_willingness"
-        android:layout_marginTop="10dp"
         ></Button>
 
 
 
 
 <Button
-    android:layout_width="match_parent"
+    android:layout_width="170dp"
     android:layout_height="wrap_content"
     android:id="@+id/btn_ok"
+    android:layout_below="@id/btn_willingness"
+    android:layout_centerHorizontal="true"
     android:layout_alignParentBottom="true"
-    android:background="@color/colorSapphireBlue"
+    android:background="@drawable/login_button_border"
+    android:layout_margin="5dp"
     android:text="OK"
     android:textColor="@color/colorWhite"></Button>
 

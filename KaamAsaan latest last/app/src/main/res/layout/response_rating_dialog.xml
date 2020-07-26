@@ -2,7 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imageview_border">
+    android:background="@drawable/logintxtfield_border">
 
     <RatingBar
         android:id="@+id/response_ratingbar"
@@ -20,13 +20,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:background="@drawable/button_background"
+         android:background="@drawable/login_button_border"
         android:layout_below="@+id/response_ratingbar"
         android:layout_marginTop="20dp"
         android:text="OK"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorWhite"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:id="@+id/response_rating_ok_button"
         android:layout_marginBottom="2dp"

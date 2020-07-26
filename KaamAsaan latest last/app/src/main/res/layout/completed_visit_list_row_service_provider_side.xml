@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@drawable/rounded_corner_border">
+    android:background="@drawable/list_border_layout">
 
 
     <TextView
@@ -11,8 +11,9 @@
         android:text="Request Id:"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         >
 
 
@@ -25,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         />
 
     <TextView
@@ -36,9 +37,10 @@
         android:layout_below="@+id/lbl_received_visit_request_Id"
         android:layout_marginLeft="5dp"
         android:text="Customer:"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
 
     <TextView
@@ -47,10 +49,10 @@
         android:id="@+id/txt_from"
         android:layout_below="@+id/lbl_received_visit_request_Id"
         android:layout_toRightOf="@+id/lbl_from"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
 
@@ -61,9 +63,10 @@
         android:layout_below="@+id/lbl_from"
         android:text="Potential Time:"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
     <TextView
         android:layout_width="wrap_content"
@@ -71,10 +74,10 @@
         android:id="@+id/txt_potential_time"
         android:layout_below="@+id/lbl_from"
         android:layout_toRightOf="@id/lbl_potential_time"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
     <TextView
@@ -84,9 +87,10 @@
         android:layout_below="@+id/lbl_potential_time"
         android:layout_marginLeft="5dp"
         android:text="Duration (Hours):"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
     <TextView
         android:layout_width="wrap_content"
@@ -96,7 +100,8 @@
         android:layout_toRightOf="@id/lbl_duration"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
     <TextView
@@ -105,10 +110,11 @@
         android:id="@+id/lbl_visit_cost"
         android:layout_below="@+id/lbl_duration"
         android:text="Visit Cost:"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
 
     <TextView
@@ -117,57 +123,73 @@
         android:id="@+id/txt_visit_cost"
         android:layout_below="@+id/lbl_duration"
         android:layout_toRightOf="@id/lbl_visit_cost"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/txt_visit_cost"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/notification_button_background"
-        android:textColor="@color/colorSapphireBlue"
-        android:text="Send Work Request"
-        android:textSize="10sp"
-        android:layout_marginBottom="2dp"
-        android:id="@+id/btn_send_work_request"
-        android:layout_marginLeft="3dp"
-        ></Button>
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:padding="5dp"
+        android:gravity="center"
+        >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_below="@+id/txt_visit_cost"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/notification_button_background"
-        android:textColor="@color/colorSapphireBlue"
-        android:text="Response Rating"
-        android:textSize="10sp"
-        android:layout_marginBottom="2dp"
-       android:layout_toRightOf="@+id/btn_send_work_request"
-       android:id="@+id/btn_give_rating"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="3dp"
-        ></Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/txt_visit_cost"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_button_border"
+            android:textColor="@color/colorWhite"
+            android:text="Send Work Request"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/btn_send_work_request"
+            android:layout_marginLeft="3dp"
+            ></Button>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_below="@+id/txt_visit_cost"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/notification_button_background"
-        android:textColor="@color/colorSapphireBlue"
-        android:text="Delete"
-        android:textSize="10sp"
-        android:layout_marginBottom="2dp"
-        android:layout_toRightOf="@+id/btn_give_rating"
-        android:id="@+id/btn_delete_completed_visit"
-        android:layout_marginLeft="10dp"
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/txt_visit_cost"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_button_border"
+            android:textColor="@color/colorWhite"
+            android:text="Response Rating"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@+id/btn_send_work_request"
+            android:id="@+id/btn_give_rating"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="3dp"
+            ></Button>
 
-        ></Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/txt_visit_cost"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_button_border"
+            android:textColor="@color/colorWhite"
+            android:text="Delete"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@+id/btn_give_rating"
+            android:id="@+id/btn_delete_completed_visit"
+            android:layout_marginLeft="10dp"
+
+            ></Button>
+
+    </LinearLayout>
+
 
 
 

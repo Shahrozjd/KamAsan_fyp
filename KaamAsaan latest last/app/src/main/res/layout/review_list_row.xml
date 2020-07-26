@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@drawable/imageview_border"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/imageview_border">
 
-<androidx.appcompat.widget.AppCompatImageView
-    android:layout_width="50dp"
-    android:layout_height="50dp"
+<de.hdodenhof.circleimageview.CircleImageView
+    android:layout_margin="10dp"
     android:id="@+id/iv"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="10dp"
-    android:background="@drawable/imageview_border"
-    android:scaleType="fitXY"
-    ></androidx.appcompat.widget.AppCompatImageView>
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:src="@drawable/customer"
+    app:civ_border_color="@color/mainaccent"
+    app:civ_border_width="2dp"
+    ></de.hdodenhof.circleimageview.CircleImageView>
 
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="15dp"
     android:layout_toRightOf="@+id/iv"
-    android:layout_marginLeft="50dp"
+    android:layout_marginLeft="10dp"
     android:id="@+id/txt_username"
-    android:textSize="15sp"
+    android:text="Username"
+    android:textColor="@color/mainaccent"
+    android:textSize="20sp"
     android:textStyle="bold"
     ></TextView>
 
@@ -41,11 +44,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_review"
-        android:layout_below="@+id/iv"
+        android:layout_below="@+id/txt_username"
+        android:layout_toRightOf="@+id/iv"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="3dp"
+        android:textColor="#000000"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         ></com.example.kaamasaan.ExpandableTextView>

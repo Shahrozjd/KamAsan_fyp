@@ -45,6 +45,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -284,7 +286,7 @@ public class CustomerChatsFragment extends Fragment {
                     return true;
                 }
             });*/
-            AppCompatImageView iv = convertView.findViewById(R.id.iv_prof_pic);
+            CircleImageView iv = convertView.findViewById(R.id.iv_prof_pic);
             TextView txt_user_name =  convertView.findViewById(R.id.txt_user_name);
             TextView txt_message =  convertView.findViewById(R.id.txt_message);
             TextView txt_date_time =  convertView.findViewById(R.id.txt_date_time);

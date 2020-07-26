@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:visibility="visible"
-    android:background="@drawable/rounded_corner_border">
+    android:background="@drawable/list_border_layout">
 
 
     <TextView
@@ -14,9 +14,9 @@
         android:text="Request Id:"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         >
 
 
@@ -29,8 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
 
         />
 
@@ -41,10 +41,10 @@
         android:layout_below="@+id/lbl_sent_visit_request_Id"
         android:layout_marginLeft="5dp"
         android:text="To:"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
 
     <TextView
@@ -53,10 +53,10 @@
         android:id="@+id/txt_to"
         android:layout_below="@+id/lbl_sent_visit_request_Id"
         android:layout_toRightOf="@+id/lbl_to"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
 
@@ -67,10 +67,10 @@
         android:layout_below="@+id/lbl_to"
         android:text="Potential Time:"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
     <TextView
         android:layout_width="wrap_content"
@@ -78,10 +78,10 @@
         android:id="@+id/txt_potential_time"
         android:layout_below="@+id/lbl_to"
         android:layout_toRightOf="@id/lbl_potential_time"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
     <TextView
@@ -91,10 +91,10 @@
         android:layout_below="@+id/lbl_potential_time"
         android:layout_marginLeft="5dp"
         android:text="Duration (Hours):"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
     <TextView
         android:layout_width="wrap_content"
@@ -104,7 +104,8 @@
         android:layout_toRightOf="@id/lbl_duration"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
     <TextView
@@ -113,11 +114,11 @@
         android:id="@+id/lbl_visit_cost"
         android:layout_below="@+id/lbl_duration"
         android:text="Visit Cost:"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/mainaccent"
         ></TextView>
 
     <TextView
@@ -126,10 +127,10 @@
         android:id="@+id/txt_visit_cost"
         android:layout_below="@+id/lbl_duration"
         android:layout_toRightOf="@id/lbl_visit_cost"
-        android:textSize="15sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
 </RelativeLayout>
