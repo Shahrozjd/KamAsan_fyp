@@ -57,6 +57,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class EditSPProfileActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference cat_ref,sp_ref;
@@ -72,7 +74,7 @@ public class EditSPProfileActivity extends AppCompatActivity {
     AppCompatImageButton btn_pic_gallery;
     AppCompatImageButton btn_pic_camera;
     AppCompatImageButton btn_rotate;
-    AppCompatImageView iv;
+    CircleImageView iv;
     String selectedCategory = "";
     LocationManager lm;
     int REQ_Code = 100;

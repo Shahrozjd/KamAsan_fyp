@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorSapphireBlue"
+        android:background="@color/mainaccent"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ToolbarTheme"
         app:titleTextColor="@color/colorWhite"
@@ -18,7 +18,7 @@
 
 
     <ListView
-        android:layout_width="270dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/lv_received_visit_requests"
         android:layout_marginTop="60dp"

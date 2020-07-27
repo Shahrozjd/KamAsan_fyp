@@ -2,107 +2,143 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imageview_border"
-    >
+    android:background="@drawable/imageview_border">
 
 
-    <TextView
-        android:layout_width="80dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txt_name"
-        android:textSize="12sp"
-        android:textColor="@color/colorSapphireBlue"
-        android:layout_marginLeft="2dp"
-        ></TextView>
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt_profession"
-        android:textSize="12sp"
-        android:layout_below="@id/txt_name"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/colorSapphireBlue"
-        android:layout_marginLeft="2dp"
-        ></TextView>
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="150dp"
-        android:id="@+id/txt_bio"
-        android:layout_below="@+id/txt_profession"
-        android:layout_marginTop="10dp"
-        android:textSize="12sp"
-        android:textColor="@color/colorSapphireBlue"
-        android:layout_marginLeft="2dp"
-        ></TextView>
+        android:orientation="horizontal"
+        >
 
 
-    <ImageButton
-        android:id="@+id/btn_chat"
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/txt_bio"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="3dp"
-        android:background="@color/colorSapphireBlue"
-        android:src="@drawable/chat_message"
-        android:textAlignment="center"></ImageButton>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="start"
+            >
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:textSize="12sp"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorSapphireBlue"
-        android:text="Cancel"
-        android:layout_toRightOf="@+id/btn_chat"
-        android:layout_below="@+id/txt_bio"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="3dp"
-        android:id="@+id/btn_cancel"
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_name"
+                android:text="Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/mainaccent"
+                android:layout_marginLeft="2dp"
+                ></TextView>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_profession"
+                android:layout_below="@id/txt_name"
+                android:layout_marginTop="10dp"
+                android:text="profession"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/mainaccent"
+                android:layout_marginLeft="2dp"
+                ></TextView>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:id="@+id/txt_bio"
+                android:layout_below="@+id/txt_profession"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Profession"
+                android:textColor="@color/mainaccent"
+                android:layout_marginLeft="2dp"
+                ></TextView>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/txt_name"
+                android:text="Jobs:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/mainaccent"
+                android:id="@+id/lbl_job"
+                ></TextView>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Rating:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/mainaccent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/lbl_rating"
+                ></TextView>
 
-        ></Button>
+        </LinearLayout>
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:textSize="12sp"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorSapphireBlue"
-        android:text="Visit Profile"
-        android:layout_toRightOf="@+id/btn_cancel"
-        android:layout_below="@+id/txt_bio"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="3dp"
-        android:id="@+id/btn_profile"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
 
-        ></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/login_button_border"
+                android:text="Visit Profile"
+                android:layout_below="@+id/txt_bio"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/btn_profile"
+                ></Button>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_chat"
+                android:padding="5dp"
+                android:src="@drawable/ic_chat_white_30dp"
+                android:layout_toRightOf="@+id/btn_visit_profile"
+                android:background="@drawable/login_button_border"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                ></ImageButton>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/login_button_border"
+                android:text="Cancel"
+                android:layout_toRightOf="@+id/btn_chat"
+                android:layout_below="@+id/txt_bio"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/btn_cancel"
+
+                ></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/lbl_job"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="97dp"
-        android:layout_toRightOf="@+id/txt_name"
-        android:text="Jobs:"
-        android:textColor="@color/colorSapphireBlue"
-        android:textSize="12sp"></TextView>
 
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_toRightOf="@+id/txt_name"
-        android:layout_marginLeft="100dp"
-        android:text="Rating:"
-        android:textColor="@color/colorSapphireBlue"
-        android:layout_below="@id/txt_name"
-        android:layout_marginTop="10dp"
-        android:id="@+id/lbl_rating"
-        android:textSize="12sp"
-        ></TextView>
+
+
+
 
 
 </RelativeLayout>

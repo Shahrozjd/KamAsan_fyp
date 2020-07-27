@@ -17,9 +17,10 @@
             android:text="Send Work Request"
             android:textAlignment="center"
             android:textStyle="bold"
-            android:textSize="15sp"
+            android:textSize="20sp"
+            android:padding="5dp"
             android:textColor="@color/colorWhite"
-            android:background="@color/colorSapphireBlue"
+            android:background="@color/mainaccent"
             android:id="@+id/txt_visit_request_title"
             >
         </TextView>
@@ -29,6 +30,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="5dp"
             android:layout_below="@+id/txt_visit_request_title"
             android:orientation="vertical"
             >
@@ -41,7 +43,6 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/visit_request_views_border"
 
                 >
                 <TextView
@@ -50,8 +51,8 @@
                     android:text="Start Date"
                     android:textAlignment="center"
                     android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorSapphireBlue"
+                    android:textSize="18sp"
+                    android:textColor="@color/mainaccent"
                     android:background="@color/colorWhite"
                     android:id="@+id/lbl_time"
                     android:layout_marginTop="20dp"
@@ -64,7 +65,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
                     android:calendarViewShown="false"
-                    android:datePickerMode="spinner"></DatePicker>
+                    android:datePickerMode="spinner"
+                    android:background="@drawable/logintxtfield_border"
+                    >
+
+                </DatePicker>
 
             </LinearLayout>
 
@@ -76,7 +81,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:background="@drawable/visit_request_views_border"
 
                 >
                 <TextView
@@ -85,8 +89,8 @@
                     android:text="End Date"
                     android:textAlignment="center"
                     android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorSapphireBlue"
+                    android:textSize="18sp"
+                    android:textColor="@color/mainaccent"
                     android:background="@color/colorWhite"
                     android:id="@+id/lbl_date"
                     android:layout_marginTop="10dp"
@@ -100,6 +104,7 @@
                     android:calendarViewShown="false"
                     android:id="@+id/end_date"
                     style="@style/timepickerStyle"
+                    android:background="@drawable/logintxtfield_border"
                     ></DatePicker>
             </LinearLayout>
 
@@ -111,7 +116,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:background="@drawable/visit_request_views_border"
                 >
                 <TextView
                     android:layout_width="match_parent"
@@ -119,8 +123,8 @@
                     android:text="Choose Work Mode"
                     android:textAlignment="center"
                     android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorSapphireBlue"
+                    android:textSize="18sp"
+                    android:textColor="@color/mainaccent"
                     android:background="@color/colorWhite"
                     android:id="@+id/lbl_mode"
                     android:layout_marginTop="10dp"
@@ -128,9 +132,9 @@
                 </TextView>
 
                 <RadioGroup
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:background="@drawable/logintxtfield_border"
                     android:layout_marginTop="10dp"
                     android:weightSum="1"
                     android:id="@+id/radio_group"
@@ -164,7 +168,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linear_layout_cost"
                 android:orientation="vertical"
-                android:background="@drawable/visit_request_views_border"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
@@ -176,8 +179,8 @@
                     android:text="Estimated Cost"
                     android:textAlignment="center"
                     android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorSapphireBlue"
+                    android:textSize="18sp"
+                    android:textColor="@color/mainaccent"
                     android:background="@color/colorWhite"
                     android:id="@+id/lbl_cost"
                     android:layout_marginTop="10dp"
@@ -189,7 +192,9 @@
                     android:id="@+id/ed_cost"
                     android:layout_marginBottom="2dp"
                     android:inputType="number"
-                    android:background="@drawable/oval_border"
+                    android:padding="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/logintxtfield_border"
                     android:layout_marginRight="5dp"
                     android:layout_marginLeft="5dp"
                     android:paddingLeft="5dp"
@@ -201,15 +206,16 @@
             <Button
                 android:id="@+id/btn_send_work_request"
                 android:layout_width="wrap_content"
-                android:layout_height="31dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="3dp"
-                android:background="@drawable/button_background"
+                android:padding="5dp"
+                android:background="@drawable/login_button_border"
                 android:text="Send"
                 android:textColor="@color/colorWhite"
-                android:textSize="15sp"
+                android:textSize="18sp"
                 android:textStyle="bold"></Button>
 
 

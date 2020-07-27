@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/colorSkyBlue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
    >
 
     <LinearLayout
@@ -15,11 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:id="@+id/lv_chats"
-            android:dividerHeight="10sp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="100dp"
-            android:divider="@color/colorSkyBlue"
-
             ></ListView>
 
     </LinearLayout>
@@ -31,23 +28,32 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
    android:id="@+id/linear_layout_ed_text"
-    android:orientation="vertical"
-
+    android:orientation="horizontal"
     android:layout_above="@+id/relativelayout_buttons">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_weight="0.9"
         android:hint="Type message"
+        android:padding="5dp"
+        android:textSize="18dp"
         android:id="@+id/ed_message"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/imageview_border"
+        android:background="@drawable/logintxtfield_border"
         android:gravity="top"
 
         >
 
     </EditText>
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_weight="0.1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/messae_send_button"
+        android:textColor="@color/colorWhite"
 
+        ></Button>
 </LinearLayout>
 
 
@@ -59,7 +65,7 @@
         android:layout_height="50dp"
         android:id="@+id/relativelayout_buttons"
         android:layout_alignParentBottom="true"
-
+        android:layout_marginBottom="5dp"
        >
 
         <LinearLayout
@@ -73,22 +79,14 @@
 
 
             <Button
-                android:id="@+id/btn_send"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_background"
-                android:text="Send"
-                android:textColor="@color/colorWhite"
-
-                ></Button>
-
-            <Button
                 android:id="@+id/btn_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/button_background"
+                android:padding="5dp"
+                android:background="@drawable/login_button_border"
                 android:text="Cancel"
+
                 android:textColor="@color/colorWhite"
 
                 ></Button>

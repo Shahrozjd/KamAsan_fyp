@@ -34,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/ed_review"
+        android:padding="5dp"
         android:layout_below="@+id/work_ratingbar"
         android:layout_marginTop="10dp"
         android:hint="TYPE YOUR REVIEW HERE"

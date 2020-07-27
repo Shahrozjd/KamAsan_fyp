@@ -56,7 +56,7 @@ public class ServiceProviderProfileFragment extends Fragment {
     TextView txtName,txtJobs,txtReviews;
     ImageButton imageButton;
     Typeface mfont;
-    AppCompatImageView iv;
+    CircleImageView iv;
     ArrayList<WorkRating>alWorkRating;
     ListView lv_reviews;
     RatingBar ratingBar1,ratingBar2,ratingBar3,ratingBar4,ratingBar5;

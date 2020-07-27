@@ -51,7 +51,7 @@
                 android:layout_marginTop="10dp"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:text="ssdfsdfsdsgsdfsdfsdfsdfsdsdgsdgsdsdgsdgsdgsdgsdgsdfsdfsdsd"
+                android:text="Profession"
                 android:textColor="@color/mainaccent"
                 android:layout_marginLeft="2dp"
                 ></TextView>

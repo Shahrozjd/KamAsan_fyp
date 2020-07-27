@@ -5,79 +5,110 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<RelativeLayout
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".EditSPProfileActivity"
     android:background="@color/colorWhite">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Edit Profile"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColor="@color/colorSapphireBlue"
-        android:background="@drawable/imageview_border"
-        android:id="@+id/tv_title_edit_sp_profile"
-        >
-    </TextView>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_prof_pic"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/tv_title_edit_sp_profile"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/imageview_border"
-        android:scaleType="fitXY"></androidx.appcompat.widget.AppCompatImageView>
 
     <LinearLayout
-        android:layout_below="@id/iv_prof_pic"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:id="@+id/linear_layout_pic"
-        android:gravity="center">
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="clip_vertical|bottom|center"
+        android:layout_weight="0.2"
+        android:paddingTop="40dp"
+        >
+
+        <LinearLayout
+            android:layout_below="@id/imv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="invisible"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+            <!--            android:id="@+id/btn_pic_gallery"-->
+            <androidx.appcompat.widget.AppCompatImageButton
+
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/circle_background2"
+                android:text="Upload Profile Picture">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_pic_camera"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/circle_background2"
+                android:layout_marginBottom="3dp"
+                android:text="Upload Profile Picture">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_rotate"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/circle_background2"
+                android:layout_marginBottom="3dp"
+                android:text="Upload Profile Picture">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+
+        </LinearLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_prof_pic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:text="Upload Profile Picture"
+            android:src="@drawable/customer"
+            app:civ_border_color="@color/mainaccent"
+            app:civ_border_width="2dp"
+            >
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btn_pic_gallery"
-            android:background="@drawable/circle_background2"
-            android:src="@drawable/upload18x18"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="-30dp"
             android:layout_marginBottom="3dp"
-            ></androidx.appcompat.widget.AppCompatImageButton>
+            android:layout_marginRight="-40dp"
+            android:background="@drawable/circle_backgound4"
+            android:layout_below="@+id/imv"
+            android:layout_toRightOf="@+id/imv"
+            android:src="@drawable/ic_baseline_image_white_24"
+            android:text="Upload Profile Picture">
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btn_pic_camera"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/circle_background2"
-            android:src="@drawable/camera18x18"
-            android:layout_marginBottom="3dp"
-            android:text="Upload Profile Picture"></androidx.appcompat.widget.AppCompatImageButton>
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btn_rotate"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/circle_background2"
-            android:src="@drawable/rotation18x18"
-            android:layout_marginBottom="3dp"
-            android:text="Upload Profile Picture"></androidx.appcompat.widget.AppCompatImageButton>
+        </androidx.appcompat.widget.AppCompatImageButton>
 
 
     </LinearLayout>
+
+
+
 
 
     <EditText
@@ -85,9 +116,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linear_layout_pic"
-        android:layout_marginTop="3dp"
-        android:textColor="@color/colorAccent"
-        android:textSize="20sp"></EditText>
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:background="@drawable/logintxtfield_border"
+        android:hint="Name"
+        android:textSize="18sp"></EditText>
 
 
 
@@ -96,61 +132,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ed_phone"
+        android:padding="5dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/ed_name"
-
-        android:textSize="20sp"
-        android:textColor="@color/colorAccent"
+        android:hint="Phone"
+        android:textSize="18sp"
+        android:background="@drawable/logintxtfield_border"
+        android:textColor="@color/colorBlack"
         >
 
     </EditText>
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="30dp"
-        android:id="@+id/tv_latitude"
-        android:layout_below="@+id/ed_phone"
-        android:textSize="12sp"
-        android:textColor="@color/colorAccent"
-        android:background="@drawable/imageview_border"
-        >
-
-    </TextView>
-
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="30dp"
-        android:id="@+id/tv_longitude"
-        android:layout_below="@+id/ed_phone"
-        android:layout_toRightOf="@id/tv_latitude"
-        android:textSize="12sp"
-        android:textColor="@color/colorAccent"
-        android:background="@drawable/imageview_border"
-        >
-
-    </TextView>
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:layout_below="@id/ed_phone"
-        android:layout_toRightOf="@id/tv_longitude"
-        android:text="Change Location"
-        android:textSize="12sp"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorSapphireBlue"
-        android:id="@+id/btn_changelocation"
-        >
-
-    </Button>
 
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/tv_longitude"
-        android:layout_marginTop="1dp"
+        android:padding="5dp"
         android:id="@+id/ed_bio"
-        android:textSize="20sp"
-        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Bio"
+        android:background="@drawable/logintxtfield_border"
+        android:textColor="@color/colorBlack"
         >
     </EditText>
 
@@ -159,26 +167,106 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/ed_bio"
-        android:layout_marginTop="1dp"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp"></EditText>
+        android:hint="password"
+        android:background="@drawable/logintxtfield_border"
+        android:padding="5dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/tv_latitude"
+                android:layout_below="@+id/ed_phone"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/logintxtfield_border"
+                >
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/tv_longitude"
+                android:layout_below="@+id/ed_phone"
+                android:layout_toRightOf="@id/tv_latitude"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/logintxtfield_border"
+                >
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_phone"
+        android:layout_toRightOf="@id/tv_longitude"
+        android:text="Change Location"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/login_button_border"
+        android:id="@+id/btn_changelocation"
+        >
+
+    </Button>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ed_password"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/layout_time"
-        android:background="@drawable/imageview_border">
+        >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Availability Time"
             android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="5dp"
             android:textAlignment="center"
             android:id="@+id/tv_title_tme"
-            android:textColor="@color/colorSapphireBlue"
+            android:textColor="@color/mainaccent"
             />
 
         <EditText
@@ -186,8 +274,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/start_hours"
             android:layout_below="@+id/tv_title_tme"
-            android:background="@drawable/imageview_border"
-            android:textSize="20sp"
+            android:background="@drawable/logintxtfield_border"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="5dp"
             android:inputType="number"
@@ -203,8 +293,10 @@
             android:layout_below="@+id/tv_title_tme"
             android:layout_toRightOf="@+id/start_hours"
             android:layout_marginLeft="5dp"
-            android:textSize="20sp"
-            android:background="@drawable/imageview_border"
+            android:background="@drawable/logintxtfield_border"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
             android:layout_marginTop="5dp"
             android:inputType="number"
             android:layout_marginBottom="3dp"
@@ -231,8 +323,10 @@
             android:layout_below="@+id/tv_title_tme"
             android:layout_toRightOf="@+id/tv_colon"
             android:layout_marginLeft="5dp"
-            android:textSize="20sp"
-            android:background="@drawable/imageview_border"
+            android:background="@drawable/logintxtfield_border"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
             android:layout_marginTop="5dp"
             android:inputType="number"
             android:layout_marginBottom="3dp"
@@ -246,8 +340,10 @@
             android:layout_below="@+id/tv_title_tme"
             android:layout_toRightOf="@+id/end_hours"
             android:layout_marginLeft="5dp"
-            android:textSize="20sp"
-            android:background="@drawable/imageview_border"
+            android:background="@drawable/logintxtfield_border"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
             android:layout_marginTop="5dp"
             android:inputType="number"
             android:layout_marginBottom="3dp"
@@ -255,22 +351,66 @@
             />
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_visitcost"
+        android:layout_below="@+id/layout_responsetime"
+        android:layout_marginBottom="0dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Visit Cost"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:id="@+id/tv_title_visitcost"
+            android:textColor="@color/mainaccent"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_visitcost"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"
+            android:background="@drawable/logintxtfield_border"
+            android:inputType="number"
+            android:id="@+id/ed_visit_cost"/>
+
+
+    </RelativeLayout>
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/layout_responsetime"
         android:layout_below="@+id/layout_time"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/imageview_border">
+        android:layout_marginTop="20dp"
+        >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Response Time"
             android:textSize="20sp"
+            android:padding="5dp"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:id="@+id/tv_title_responseTime"
-            android:textColor="@color/colorSapphireBlue"
+            android:textColor="@color/mainaccent"
             />
 
         <RadioGroup
@@ -317,49 +457,17 @@
         </RadioGroup>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layout_visitcost"
-        android:layout_below="@+id/layout_responsetime"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/imageview_border"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Visit Cost"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:id="@+id/tv_title_visitcost"
-            android:textColor="@color/colorSapphireBlue"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_title_visitcost"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/imageview_border"
-            android:inputType="number"
-            android:id="@+id/ed_visit_cost"/>
-
-
-    </RelativeLayout>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout_visitcost"
         android:id="@+id/txt_lbl_categories"
         android:text="Category"
+        android:padding="5dp"
         android:textAlignment="center"
-        android:textColor="@color/colorSapphireBlue"
-        android:background="@color/colorWhite"
-        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainaccent"
+        android:textSize="20sp"
         ></TextView>
 
     <ListView
@@ -373,14 +481,18 @@
         ></ListView>
 
  <Button
-     android:layout_width="match_parent"
+     android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_below="@+id/list_categories"
      android:id="@+id/btn_save"
      android:text="Save"
+     android:layout_gravity="center"
      android:textSize="20sp"
+     android:padding="5dp"
+     android:layout_marginBottom="10dp"
      android:textColor="@color/colorWhite"
-     android:background="@color/colorSapphireBlue">
+     android:background="@drawable/login_button_border"
+     >
 
 
  </Button>
@@ -390,5 +502,5 @@
 
 
 
-</RelativeLayout>
+</LinearLayout>
 </ScrollView>

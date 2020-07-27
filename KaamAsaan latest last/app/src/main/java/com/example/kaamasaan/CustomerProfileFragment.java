@@ -98,7 +98,6 @@ public class CustomerProfileFragment extends Fragment {
         imageButton = view.findViewById(R.id.btn_edit_name);
         imv = view.findViewById(R.id.iv_prof_pic);
         txtName.setText(MainActivity.mcustomer.getFullName());
-        txtName.setTypeface(mfont);
         ratingBar1 = view.findViewById(R.id.ratingbar1);
         ratingBar2 = view.findViewById(R.id.ratingbar2);
         ratingBar3 = view.findViewById(R.id.ratingbar3);
