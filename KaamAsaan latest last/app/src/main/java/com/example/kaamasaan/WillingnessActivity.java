@@ -89,7 +89,8 @@ public class WillingnessActivity extends AppCompatActivity {
                     VisitRequest visitRequest = new VisitRequest(alReceivedVisitRequests.get(position).RequestId,
                             alReceivedVisitRequests.get(position).getUserId(), alReceivedVisitRequests.get(position).getUserName(),"Pending",
                             alReceivedVisitRequests.get(position).potentialTimeAndDate,alReceivedVisitRequests.get(position).duration,
-                            alReceivedVisitRequests.get(position).getVisitCost(),alReceivedVisitRequests.get(position).getImageUrl());
+                            alReceivedVisitRequests.get(position).getVisitCost(),alReceivedVisitRequests.get(position).getImageUrl(),
+                            alReceivedVisitRequests.get(position).getRatedByServiceProvider());
                     alPendingVisitRequests = MainActivity.mcustomer.getPendingVisitsList();
                     if(alPendingVisitRequests==null) {
                         alPendingVisitRequests = new ArrayList<>();

@@ -53,13 +53,13 @@ public class ServiceProviderProfileFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    TextView txtName,txtJobs,txtReviews;
+    TextView txtName,txtJobs,txtReviews,rating;
     ImageButton imageButton;
     Typeface mfont;
     CircleImageView iv;
     ArrayList<WorkRating>alWorkRating;
     ListView lv_reviews;
-    RatingBar ratingBar1,ratingBar2,ratingBar3,ratingBar4,ratingBar5;
+    RatingBar ratingBar5;
 
 
     // TODO: Rename and change types of parameters
@@ -111,10 +111,7 @@ public class ServiceProviderProfileFragment extends Fragment {
         txtName.setTypeface(mfont);
         txtReviews = view.findViewById(R.id.txt_reviews);
         txtJobs = view.findViewById(R.id.txt_jobs);
-        ratingBar1 = view.findViewById(R.id.ratingbar1);
-        ratingBar2 = view.findViewById(R.id.ratingbar2);
-        ratingBar3 = view.findViewById(R.id.ratingbar3);
-        ratingBar4 = view.findViewById(R.id.ratingbar4);
+        rating = view.findViewById(R.id.ratingView);
         ratingBar5 = view.findViewById(R.id.ratingbar5);
 
         getLatestData();
@@ -130,7 +127,7 @@ public class ServiceProviderProfileFragment extends Fragment {
             }
         });
 
-
+        txtJobs.setVisibility(View.GONE);
         return view;
     }
 
@@ -191,22 +188,8 @@ public class ServiceProviderProfileFragment extends Fragment {
                     if(serviceProvider.getId().equals(MainActivity.mserviceProvider.getId())){
                         int combinedRating = (serviceProvider.getResponseRating()+serviceProvider.getAverageWorkRating())/2;
 
-
-                          if(combinedRating==1){
-                              ratingBar1.setRating(combinedRating);
-                          }
-                          else if(combinedRating==2){
-                              ratingBar2.setRating(combinedRating);
-                          }
-                          else if(combinedRating==3){
-                              ratingBar3.setRating(combinedRating);
-                          }
-                          else if(combinedRating==4){
-                              ratingBar4.setRating(combinedRating);
-                          }
-                          else if(combinedRating==5){
                               ratingBar5.setRating(combinedRating);
-                          }
+                        rating.setText(combinedRating + "");
 
                         alWorkRating = serviceProvider.getWorkRatingList();
                         if(alWorkRating==null){

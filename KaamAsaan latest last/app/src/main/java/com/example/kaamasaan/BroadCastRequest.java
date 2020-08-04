@@ -3,7 +3,7 @@ package com.example.kaamasaan;
 import java.util.ArrayList;
 
 public class BroadCastRequest {
-    String id, customerUserName,title,description,category,imageUrl1,imageUrl2,imageUrl3;
+    String id, customerUserName,title,description,category,imageUrl1,imageUrl2,imageUrl3,imageUrl4,imageUrl5,imageUrl6;
     Double latitude,longitude,workRating,minVisitCost, maxVisitCost;
     int noOfPersonsVisiting;
     ArrayList<VisitRequest>VisitRequestsList;
@@ -15,7 +15,7 @@ public class BroadCastRequest {
     public BroadCastRequest(String id, String customerUserName, String title, String description, String category,
                             Double latitude, Double longitude, Double workRating, Double minVisitCost,
                             Double maxVisitCost,int  noOfPersonsVisiting,String imageUrl1,String imageUrl2,
-                            String imageUrl3, ArrayList<VisitRequest>VisitRequestsList) {
+                            String imageUrl3,String imageUrl4,String imageUrl5,String imageUrl6, ArrayList<VisitRequest>VisitRequestsList) {
         this.id = id;
         this.customerUserName = customerUserName;
         this.title = title;
@@ -30,6 +30,9 @@ public class BroadCastRequest {
         this.imageUrl1 =imageUrl1;
         this.imageUrl2 = imageUrl2;
         this.imageUrl3 = imageUrl3;
+        this.imageUrl4 =imageUrl4;
+        this.imageUrl5 = imageUrl5;
+        this.imageUrl6 = imageUrl6;
         this.VisitRequestsList = VisitRequestsList;
 
     }
@@ -152,5 +155,26 @@ public class BroadCastRequest {
 
     public void setImageUrl3(String imageUrl3) {
         this.imageUrl3 = imageUrl3;
+    }
+
+    public String getImageUrl4() {
+        return imageUrl4;
+    }
+    public void setImageUrl4(String imageUrl4) {
+        this.imageUrl4 = imageUrl4;
+    }
+
+    public String getImageUrl5() {
+        return imageUrl5;
+    }
+
+    public void setImageUrl5(String imageUrl5) {
+        this.imageUrl5 = imageUrl5;
+    }
+    public String getImageUrl6() {
+        return imageUrl6;
+    }
+    public void setImageUrl6(String imageUrl6) {
+        this.imageUrl6 = imageUrl6;
     }
 }

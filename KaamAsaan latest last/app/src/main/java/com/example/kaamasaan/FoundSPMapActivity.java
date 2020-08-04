@@ -503,36 +503,23 @@ public class FoundSPMapActivity extends FragmentActivity implements OnMapReadyCa
         dialog.setContentView(R.layout.dialog_serviceprovider_profile);
         dialog.setTitle(sp_UserName);
        // Toast.makeText(FoundSPMapActivity.this,sp_UserName,Toast.LENGTH_LONG).show();
-        AppCompatImageView iv = dialog.findViewById(R.id.iv_prof_pic);
+        de.hdodenhof.circleimageview.CircleImageView iv = dialog.findViewById(R.id.iv_prof_pic);
         TextView tv = dialog.findViewById(R.id.txt_name_dialog);
         TextView txt_reviews = dialog.findViewById(R.id.txt_reviews);
         TextView txt_jobs = dialog.findViewById(R.id.txt_jobs);
-        RatingBar ratingBar1,ratingBar2,ratingBar3,ratingBar4,ratingBar5;
+        RatingBar ratingBar5;
+        TextView ratingView = dialog.findViewById(R.id.rating_view);
         ListView lv_reviews = dialog.findViewById(R.id.lv_reviews);
         txt_reviews.setText("Reviews:"+noOfReviews);
         txt_jobs.setText("Jobs:"+noOfJobs);
-        ratingBar1 = dialog.findViewById(R.id.ratingbar1);
-        ratingBar2 = dialog.findViewById(R.id.ratingbar2);
-        ratingBar3 =dialog.findViewById(R.id.ratingbar3);
-        ratingBar4 = dialog.findViewById(R.id.ratingbar4);
         ratingBar5 = dialog.findViewById(R.id.ratingbar5);
         tv.setText(sp_UserName);
-        if(rating==1){
-            ratingBar1.setRating(rating);
-        }
-        else if(rating==2){
-            ratingBar2.setRating(rating);
-        }
-        else if(rating==3){
-            ratingBar3.setRating(rating);
-        }
-        else if(rating==4){
-            ratingBar4.setRating(rating);
-        }
-        else if(rating==5){
-            ratingBar5.setRating(rating);
-        }
 
+
+        ratingView.setText(rating+"");
+            ratingBar5.setRating(rating);
+
+txt_jobs.setVisibility(View.GONE);
         if(alWorkRating!=null){
             ReviewsAdapter reviewsAdapter = new ReviewsAdapter();
             lv_reviews.setAdapter(reviewsAdapter);
@@ -1104,7 +1091,7 @@ public class FoundSPMapActivity extends FragmentActivity implements OnMapReadyCa
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             convertView = getLayoutInflater().inflate(R.layout.review_list_row, null);
-            AppCompatImageView iv = convertView.findViewById(R.id.iv);
+            de.hdodenhof.circleimageview.CircleImageView iv = convertView.findViewById(R.id.iv);
             TextView txt_name = convertView.findViewById(R.id.txt_username);
             final TextView txt_review = convertView.findViewById(R.id.txt_review);
             RatingBar ratingBar = convertView.findViewById(R.id.ratingbar);

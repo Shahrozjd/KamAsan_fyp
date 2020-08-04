@@ -80,7 +80,7 @@ public class SendVisitRequestActivityForBroadCast extends AppCompatActivity {
                      int duration =  Integer.parseInt(ed_duration.getText().toString());
                      int cost  =  Integer.parseInt(ed_cost.getText().toString());
                      VisitRequest sentVisitRequest = new VisitRequest(visitRequestId,MainActivity.mserviceProvider.getId(),MainActivity.mserviceProvider.getUserName(),
-                             "Received",getTime(),duration, cost,MainActivity.mserviceProvider.getProfilePicUrl());
+                             "Received",getTime(),duration, cost,MainActivity.mserviceProvider.getProfilePicUrl(),"no");
                      ArrayList<VisitRequest> listVisitRequestServiceProvider =MainActivity.mserviceProvider.getSentVisitRequestList();
                      if(listVisitRequestServiceProvider==null){
                          Toast.makeText(SendVisitRequestActivityForBroadCast.this,

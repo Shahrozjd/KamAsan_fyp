@@ -89,7 +89,7 @@ public class SendVisitRequestActivity extends AppCompatActivity {
                     int duration =  Integer.parseInt(ed_duration.getText().toString());
                     int cost  =  Integer.parseInt(ed_cost.getText().toString());
                     VisitRequest sentVisitRequest = new VisitRequest(visitRequestId,customerID,customerUserName,"Sent",getTime(),duration, cost,
-                            MainActivity.mserviceProvider.getProfilePicUrl());
+                            MainActivity.mserviceProvider.getProfilePicUrl(),"no");
                     ArrayList<VisitRequest> listVisitRequestServiceProvider =MainActivity.mserviceProvider.getSentVisitRequestList();
                      sendVisitRequest(sentVisitRequest);
 

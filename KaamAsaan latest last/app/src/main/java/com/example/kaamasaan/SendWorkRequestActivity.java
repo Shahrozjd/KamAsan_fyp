@@ -86,7 +86,7 @@ public class SendWorkRequestActivity extends AppCompatActivity {
                     DatabaseReference sp_ref = FirebaseDatabase.getInstance().getReference("Users").child("ServiceProviders").child(MainActivity.mserviceProvider.getId());
                     String workRequestId= requestId;
                     WorkRequest workRequest = new WorkRequest(workRequestId,
-                            customerName, "Sent",startDate,endDate,mode,cost);
+                            customerName, "Sent",startDate,endDate,mode,cost,"no");
 
                     sendWorkRequest(workRequest);
                     onBackPressed();

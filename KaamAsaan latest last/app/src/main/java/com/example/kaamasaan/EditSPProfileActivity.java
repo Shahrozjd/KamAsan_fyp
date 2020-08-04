@@ -116,7 +116,7 @@ public class EditSPProfileActivity extends AppCompatActivity {
         ed_phone.setText(MainActivity.mserviceProvider.getPhone());
         tv_lat.setText(String.valueOf(MainActivity.mserviceProvider.getLatititude()));
         tv_lng.setText(String.valueOf(MainActivity.mserviceProvider.getLongitude()));
-        ed_bio.setText("Bio:\n"+MainActivity.mserviceProvider.getBio());
+        ed_bio.setText(MainActivity.mserviceProvider.getBio());
         ed_password.setText(MainActivity.mserviceProvider.getPassword());
         ed_visitcost.setText(String.valueOf(MainActivity.mserviceProvider.getVisitCost()));
         lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);

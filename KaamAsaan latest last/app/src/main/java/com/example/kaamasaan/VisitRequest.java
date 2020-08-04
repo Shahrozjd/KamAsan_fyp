@@ -8,20 +8,23 @@ public class VisitRequest implements Parcelable {
     String potentialTimeAndDate;              //Status can be Sent, Accepted , Rejected, Completed
     int duration, VisitCost;
     String imageUrl;// this imageUrl is profile pic Url of Service Provider.  We will use Url giving response rating to customer
-
+    String ratedByServiceProvider;
    public VisitRequest(){
 
    }
 
-    public VisitRequest(String requestId, String UserId,String userName, String status, String potentialTimeAndDate,int duration, int visitCost,String imageUrl) {
-       this. RequestId = requestId;
-       this.UserId = UserId;
+    public VisitRequest(String requestId, String UserId,String userName,
+                        String status, String potentialTimeAndDate,int duration, int visitCost,String imageUrl,String ratedByServiceProvider) {
+        this.RequestId = requestId;
+        this.UserId = UserId;
         this.UserName = userName;
        this. Status = status;
        this. potentialTimeAndDate = potentialTimeAndDate;
         this.duration = duration;
        this. VisitCost = visitCost;
        this.imageUrl = imageUrl;
+       this.ratedByServiceProvider = ratedByServiceProvider;
+
     }
 
     protected VisitRequest(Parcel in) {
@@ -33,6 +36,8 @@ public class VisitRequest implements Parcelable {
         duration = in.readInt();
         VisitCost = in.readInt();
         imageUrl = in.readString();
+        ratedByServiceProvider = in.readString();
+
     }
 
     public static final Creator<VisitRequest> CREATOR = new Creator<VisitRequest>() {
@@ -112,6 +117,14 @@ public class VisitRequest implements Parcelable {
         VisitCost = visitCost;
     }
 
+    public String getRatedByServiceProvider() {
+        return ratedByServiceProvider;
+    }
+
+    public void setRatedByServiceProvider(String ratedByServiceProvider) {
+        this.ratedByServiceProvider = ratedByServiceProvider;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -126,5 +139,8 @@ public class VisitRequest implements Parcelable {
         dest.writeString(potentialTimeAndDate);
         dest.writeInt(duration);
         dest.writeInt(VisitCost);
+        dest.writeString(ratedByServiceProvider);
+
+
     }
 }

@@ -17,13 +17,11 @@
         android:layout_weight="0.4"
         >
 
-        <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
+        <ScrollView
             android:id="@+id/item_scrollvw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_title_signup2"
-            xmlns:android="http://schemas.android.com/apk/res/android">
+            android:layout_below="@+id/tv_title_signup2">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -32,16 +30,14 @@
                 android:layout_below="@+id/tv_title_signup2">
 
                 <TextView
+                    android:id="@+id/txt_lbl_category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Select Category"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
                     android:textAlignment="center"
-                    android:id="@+id/txt_lbl_category"
                     android:textColor="@color/mainaccent"
-                    />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <ListView
                     android:layout_width="match_parent"

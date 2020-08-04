@@ -37,7 +37,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class ServiceProviderSignUpPart3Activity extends AppCompatActivity {
-    TextView txt_title;
+    //TextView txt_title;
     Typeface mfont;
     Button signup;
     EditText start_hours,start_mins,end_hours,end_mins,ed_bio,ed_visitcost;
@@ -58,8 +58,8 @@ public class ServiceProviderSignUpPart3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_provider_sign_up_part3);
         mfont = Typeface.createFromAsset(this.getAssets(),"fonts/KaushanScript-Regular.otf");
-        txt_title = findViewById(R.id.tv_title_signup3);
-        txt_title.setTypeface(mfont);
+       /* txt_title = findViewById(R.id.tv_title_signup3);
+        txt_title.setTypeface(mfont);*/
         start_hours = findViewById(R.id.start_hours);
         start_mins = findViewById(R.id.start_minutes);
         end_hours = findViewById(R.id.end_hours);
@@ -151,10 +151,12 @@ public class ServiceProviderSignUpPart3Activity extends AppCompatActivity {
 
                     final String userName =   ServiceProviderSignUpPart1Activity.sharedpreferences.getString("userNamekey","");
                     String capturedImageUri = ServiceProviderSignUpPart1Activity.sharedpreferences.getString("urikey","");
+                    Toast.makeText(getApplicationContext(),"pic uri: "+capturedImageUri,Toast.LENGTH_LONG).show();
                     final StorageReference storageReference = mStorageRef.child("ServiceProviders" + "/" + userName + ".jpg");
+                    System.out.println("muri: "+capturedImageUri);
                     final String[] mDurl = {""};
                     mprogressdialog.show();
-                    UploadTask utask = (UploadTask) storageReference.putFile(Uri.parse(capturedImageUri));
+                    UploadTask utask = (UploadTask) storageReference.putFile(Uri.parse("content://media/external/images/media/6050"));
                     Task<Uri> urlTas= utask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                         @Override
                         public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
@@ -221,7 +223,6 @@ public class ServiceProviderSignUpPart3Activity extends AppCompatActivity {
                             }
                         }
                     });
-
 
 
 

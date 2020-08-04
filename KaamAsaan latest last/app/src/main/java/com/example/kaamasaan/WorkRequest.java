@@ -7,6 +7,7 @@ public class WorkRequest implements Parcelable {
     String requestId, UserName,   Status;  // UserName will be Customer's User Name on Customer side and ServiceProvider's User Name on Service Prover side.Status will
     String startDate, endDate, Mode; // offline/online
     int estimatedCost;
+    String ratedByServiceProvider;
 
 public WorkRequest(){
 
@@ -21,6 +22,7 @@ public WorkRequest(){
         endDate = in.readString();
         Mode = in.readString();
         estimatedCost = in.readInt();
+        ratedByServiceProvider = in.readString();
     }
 
     public static final Creator<WorkRequest> CREATOR = new Creator<WorkRequest>() {
@@ -35,7 +37,8 @@ public WorkRequest(){
         }
     };
 
-    public WorkRequest(String requestId,String userName, String status, String startDate, String endDate, String mode, int estimatedCost) {
+    public WorkRequest(String requestId,String userName, String status, String startDate, String endDate, String mode, int estimatedCost,
+                       String ratedByServiceProvider) {
         this.requestId = requestId;
 
         UserName = userName;
@@ -44,6 +47,7 @@ public WorkRequest(){
         this.endDate = endDate;
         Mode = mode;
         this.estimatedCost = estimatedCost;
+        this.ratedByServiceProvider = ratedByServiceProvider;
     }
 
 
@@ -104,6 +108,14 @@ public WorkRequest(){
         this.estimatedCost = estimatedCost;
     }
 
+    public String getRatedByServiceProvider() {
+        return ratedByServiceProvider;
+    }
+
+    public void setRatedByServiceProvider(String ratedByServiceProvider) {
+        this.ratedByServiceProvider = ratedByServiceProvider;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -118,5 +130,6 @@ public WorkRequest(){
         dest.writeString(endDate);
         dest.writeString(Mode);
         dest.writeInt(estimatedCost);
+        dest.writeString(ratedByServiceProvider);
     }
 }

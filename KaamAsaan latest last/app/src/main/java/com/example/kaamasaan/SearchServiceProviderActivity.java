@@ -175,7 +175,7 @@ chkwasherman.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListen
             @Override
             public boolean onQueryTextChange(String newText) {
 
-                arrayAdapter.getFilter().filter(newText);
+              //  arrayAdapter.getFilter().filter(newText);
 
 
                 return false;

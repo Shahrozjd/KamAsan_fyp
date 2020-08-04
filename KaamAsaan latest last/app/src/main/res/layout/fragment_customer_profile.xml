@@ -77,49 +77,19 @@
 
             </TextView>
 
-            <RatingBar
-                android:id="@+id/ratingbar1"
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/iv_prof_pic"
-                android:layout_marginTop="5dp"
-                android:background="@color/colorWhite"
-                android:progressTint="@color/colorYellow"
-                android:numStars="1"
-                style="?android:attr/ratingBarStyleSmall"/>
-            <RatingBar
-                android:id="@+id/ratingbar2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:progressTint="@color/colorYellow"
-                android:layout_below="@+id/ratingbar1"
-                android:layout_marginTop="3dp"
-                android:numStars="2"
-                style="?android:attr/ratingBarStyleSmall" />
-
-            <RatingBar
-                android:id="@+id/ratingbar3"
-                style="?android:attr/ratingBarStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/ratingView"
                 android:layout_below="@+id/ratingbar2"
-                android:layout_marginTop="3dp"
-                android:background="@color/colorWhite"
-                android:numStars="3"
-                android:progressTint="@color/colorYellow" />
-
-            <RatingBar
-                android:id="@+id/ratingbar4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:progressTint="@color/colorYellow"
-                android:layout_below="@+id/ratingbar3"
-                android:layout_marginTop="3dp"
-                android:numStars="4"
-                style="?android:attr/ratingBarStyleSmall" />
-
+                android:layout_toRightOf="@+id/ratingbar2"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:text="0 Stars"
+                android:textSize="16dp"
+                android:textColor="@color/mainaccent"
+                >
+            </TextView>
             <RatingBar
                 android:id="@+id/ratingbar5"
                 android:layout_width="wrap_content"
@@ -174,10 +144,24 @@
         >
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_lbl_reviews"
+            android:layout_below="@+id/ratingbar5"
+            android:text="Reviews:"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorSapphireBlue"
+            android:textAlignment="center"
+            >
+
+        </TextView>
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@id/txt_lbl_reviews"
             android:layout_marginTop="5dp"
             android:id="@+id/lv_reviews"
             >

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -289,6 +290,7 @@ public class CustomerNoficationsFragment extends Fragment {
             TextView lbl_sp_category = convertView.findViewById(R.id.lbl_sp_category);
             TextView sp_category = convertView.findViewById(R.id.txt_sp_category);
             Button btn_details = convertView.findViewById(R.id.btn_details);
+            Button btn_willing = convertView.findViewById(R.id.btn_willing);
 
             broadcast_id.setText(alBroadCastRequests.get(position).getId());
             broadcast_title.setText(alBroadCastRequests.get(position).getTitle());
@@ -300,6 +302,15 @@ public class CustomerNoficationsFragment extends Fragment {
                  getDetailsOfBroadCast(alBroadCastRequests.get(position).getId());
              }
          });
+
+            btn_willing.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),WillingnessActivity.class);
+                    intent.putExtra("broadCastId",alBroadCastRequests.get(position).getId().toString());
+                    startActivity(intent);
+                         }
+            });
             return convertView;
         }
     }
@@ -371,7 +382,8 @@ public class CustomerNoficationsFragment extends Fragment {
     }
 
     private Dialog showBroadCastDetails(String id,String broadcastTitle, String description, String category, String broadcast_location,
-    String numberOfSPVisiting, String imageUrl1,String imageUrl2,String imageUrl3 ){
+    String numberOfSPVisiting, String imageUrl1,String imageUrl2,String imageUrl3,
+                                        String imageUrl4,String imageUrl5,String imageUrl6){
 
 
         View view =  getActivity().getLayoutInflater().inflate(R.layout.sent_broadcast_detail_dialog,null);   // custom view
@@ -389,9 +401,12 @@ public class CustomerNoficationsFragment extends Fragment {
         TextView sp_category = view.findViewById(R.id.txt_sp_category);
         TextView txt_broadcast_location = view.findViewById(R.id.txt_broadcast_location);
         TextView no_of_sp_visiting = view.findViewById(R.id.txt_number_of_sp_visiting);
-        androidx.appcompat.widget.AppCompatImageView iv1 =  view.findViewById(R.id.iv1);
-        androidx.appcompat.widget.AppCompatImageView iv2 =  view.findViewById(R.id.iv2);
-        androidx.appcompat.widget.AppCompatImageView iv3 =  view.findViewById(R.id.iv3);
+        final androidx.appcompat.widget.AppCompatImageView iv1 =  view.findViewById(R.id.iv1);
+        final androidx.appcompat.widget.AppCompatImageView iv2 =  view.findViewById(R.id.iv2);
+        final androidx.appcompat.widget.AppCompatImageView iv3 =  view.findViewById(R.id.iv3);
+        final androidx.appcompat.widget.AppCompatImageView iv4 =  view.findViewById(R.id.iv4);
+        final androidx.appcompat.widget.AppCompatImageView iv5 =  view.findViewById(R.id.iv5);
+        final androidx.appcompat.widget.AppCompatImageView iv6 =  view.findViewById(R.id.iv6);
         Button btn_willingness = view.findViewById(R.id.btn_willingness);
         Button btn_ok =view.findViewById(R.id.btn_ok);
 
@@ -411,6 +426,64 @@ public class CustomerNoficationsFragment extends Fragment {
         if(imageUrl3!=null&&imageUrl3!=""){
             Glide.with(getActivity()).load(imageUrl3).into(iv3);
         }
+        if(imageUrl4!=null&&imageUrl4!=""){
+            Glide.with(getActivity()).load(imageUrl4).into(iv4);
+        }
+        if(imageUrl5!=null&&imageUrl5!=""){
+            Glide.with(getActivity()).load(imageUrl5).into(iv5);
+        }
+        if(imageUrl6!=null&&imageUrl6!=""){
+            Glide.with(getActivity()).load(imageUrl6).into(iv6);
+        }
+
+        iv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(iv1.getDrawable()!=null) {
+                    showLargeImage(iv1.getDrawable());
+                }
+            }
+        });
+        iv2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(iv2.getDrawable()!=null) {
+                    showLargeImage(iv2.getDrawable());
+                }
+            }
+        });
+        iv3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(iv3.getDrawable()!=null) {
+                    showLargeImage(iv3.getDrawable());
+                }
+            }
+        });
+        iv4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(iv4.getDrawable()!=null) {
+                    showLargeImage(iv4.getDrawable());
+                }
+            }
+        });
+        iv5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(iv5.getDrawable()!=null) {
+                    showLargeImage(iv5.getDrawable());
+                }
+            }
+        });
+        iv6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(iv6.getDrawable()!=null) {
+                    showLargeImage(iv6.getDrawable());
+                }
+            }
+        });
 
         btn_ok.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -449,7 +522,8 @@ public class CustomerNoficationsFragment extends Fragment {
                         broadCastRequest.getCategory(), getAddress(broadCastRequest.getLatitude(),
                                      broadCastRequest.getLongitude()),String.valueOf( visitRequestListSize),
                              broadCastRequest.getImageUrl1(),broadCastRequest.getImageUrl2(),
-                             broadCastRequest.getImageUrl3());
+                             broadCastRequest.getImageUrl3(), broadCastRequest.getImageUrl4(),
+                             broadCastRequest.getImageUrl5(), broadCastRequest.getImageUrl6());
                        detailsDialog.show();
                     Window window = detailsDialog.getWindow();
                     window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
@@ -518,7 +592,9 @@ public class CustomerNoficationsFragment extends Fragment {
                  VisitRequest visitRequest = new VisitRequest(alReceivedVisitRequests.get(position).RequestId,
                         alReceivedVisitRequests.get(position).getUserId(),alReceivedVisitRequests.get(position).getUserName(),"Pending",
                          alReceivedVisitRequests.get(position).potentialTimeAndDate,alReceivedVisitRequests.get(position).duration,
-                         alReceivedVisitRequests.get(position).getVisitCost(),alReceivedVisitRequests.get(position).getImageUrl());
+                         alReceivedVisitRequests.get(position).getVisitCost(),alReceivedVisitRequests.get(position).getImageUrl(),
+                         alReceivedVisitRequests.get(position).getRatedByServiceProvider());
+
                          System.out.println("UserName3: "+alReceivedVisitRequests.get(position).getUserName());
                  AddVisitRequestToPendingVisitInCustomerAndServiceProvider(visitRequest,MainActivity.mcustomer.getId(),position,txt_to.getText().toString());
 
@@ -757,7 +833,7 @@ public class CustomerNoficationsFragment extends Fragment {
                             alPendingVisitRequests.get(position).getUserId(),alPendingVisitRequests.get(position).getUserName(),
                             "Expired",alPendingVisitRequests.get(position).potentialTimeAndDate,
                             alPendingVisitRequests.get(position).duration,alPendingVisitRequests.get(position).getVisitCost(),
-                            alPendingVisitRequests.get(position).getImageUrl());
+                            alPendingVisitRequests.get(position).getImageUrl(),alPendingVisitRequests.get(position).getRatedByServiceProvider());
 
                             showRatingDialog(txt_from.getText().toString(),position,visitRequest);
 
@@ -1491,7 +1567,7 @@ Toast.makeText(getActivity(),"size is: "+responseTimeRatingArrayListOfServicePro
                     WorkRequest workRequest = new WorkRequest(alReceivedWorkRequests.get(position).getRequestId(),
                             alReceivedWorkRequests.get(position).getUserName(),"Pending",alReceivedWorkRequests.get(position).getStartDate(),
                             alReceivedWorkRequests.get(position).getEndDate(),alReceivedWorkRequests.get(position).getMode(),
-                            alReceivedWorkRequests.get(position).getEstimatedCost());
+                            alReceivedWorkRequests.get(position).getEstimatedCost(),alReceivedWorkRequests.get(position).getRatedByServiceProvider());
 
                         AddReceivedWorkRequestToPendingWorksInCustomerAndServiceProvider(workRequest,MainActivity.mcustomer.getId(),
                             position,alReceivedWorkRequests.get(position).getUserName());
@@ -1555,7 +1631,8 @@ Toast.makeText(getActivity(),"size is: "+responseTimeRatingArrayListOfServicePro
             txt_estimated_cost.setText(String.valueOf(alPendingWorks.get(position).getEstimatedCost()));
             final WorkRequest workRequest = new WorkRequest(txt_received_work_request_Id.getText().toString(),txt_from.getText().toString(),
                     "Completed",txt_start_date.getText().toString(),txt_end_date.getText().toString(),
-                    txt_mode.getText().toString(),Integer.parseInt(txt_estimated_cost.getText().toString()));
+                    txt_mode.getText().toString(),Integer.parseInt(txt_estimated_cost.getText().toString()),
+                    alPendingWorks.get(position).getRatedByServiceProvider());
             btn_end_work.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -1891,5 +1968,18 @@ Toast.makeText(getActivity(),"size is: "+responseTimeRatingArrayListOfServicePro
 
     }
 
+    public void showLargeImage(Drawable clone){
+        View view = getActivity().getLayoutInflater().inflate(R.layout.largeimagedialog, null);
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(getActivity(), android.R.style.Theme_Holo_Dialog_NoActionBar);
+        final androidx.appcompat.app.AlertDialog alertDialog = builder.create();
+        alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+        alertDialog.setView(view, 0, 0, 0, 0); // binding alert dialog with custom view
+        androidx.appcompat.widget.AppCompatImageView iv = view.findViewById(R.id.iv_large);
+        iv.setImageDrawable(clone);
+        alertDialog.show();
+        Window window = alertDialog.getWindow();
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
 
+    }
 }

@@ -1,6 +1,7 @@
 package com.example.kaamasaan;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -70,6 +71,7 @@ public class ServiceProviderSignUpPart1Activity extends AppCompatActivity {
     AppCompatImageView iv;
     private  static final int SELECT_FROM_GALLERY = 1;
     private static final int  CAPTURE_FROM_CAMERA = 2;
+    public static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 123;
     public static double latitude = 0.0;
     public static double longitude=   0.0;
     int RequestCode = 10;
@@ -148,10 +150,30 @@ public class ServiceProviderSignUpPart1Activity extends AppCompatActivity {
  btn_pic_gallery.setOnClickListener(new View.OnClickListener() {
      @Override
      public void onClick(View v) {
-         Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
-      //
-         startActivityForResult(i,SELECT_FROM_GALLERY);
-     }
+
+         int currentAPIVersion = Build.VERSION.SDK_INT;
+         if (currentAPIVersion >= android.os.Build.VERSION_CODES.M) {
+             if (ContextCompat.checkSelfPermission(ServiceProviderSignUpPart1Activity.this,
+                     Manifest.permission.READ_EXTERNAL_STORAGE)
+                     != PackageManager.PERMISSION_GRANTED) {
+
+                 ActivityCompat.requestPermissions(ServiceProviderSignUpPart1Activity.this,
+                         new String[] {Manifest.permission.READ_EXTERNAL_STORAGE  },
+                         SELECT_FROM_GALLERY  );
+             }
+
+
+         }
+
+
+
+else {
+
+             Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+
+             startActivityForResult(i, SELECT_FROM_GALLERY);
+         }
+     }// end onClick
  });
 
 
@@ -413,6 +435,7 @@ public class ServiceProviderSignUpPart1Activity extends AppCompatActivity {
 
              else{
                 // Toast.makeText(ServiceProviderSignUpPart1Activity.this,"Your location is not traced",Toast.LENGTH_LONG).show();
+                 lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
                  lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
 
              }
@@ -472,6 +495,17 @@ public class ServiceProviderSignUpPart1Activity extends AppCompatActivity {
                 Toast.makeText(ServiceProviderSignUpPart1Activity.this,"To take photo , Allow the app  to use external storage.",Toast.LENGTH_LONG).show();
               //  Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
               //  startActivityForResult(cameraIntent,CAPTURE_FROM_CAMERA);
+            }
+        }
+        else if(requestCode == SELECT_FROM_GALLERY){
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // do your stuff
+                Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+
+                startActivityForResult(i, SELECT_FROM_GALLERY);
+            } else {
+                Toast.makeText(this, "Permission Denied. You need to Allow this app to get access to your photos",
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -726,5 +760,50 @@ public class ServiceProviderSignUpPart1Activity extends AppCompatActivity {
         return degree;
     }
 
+    public boolean checkPermissionREAD_EXTERNAL_STORAGE(
+            final Context context) {
+        int currentAPIVersion = Build.VERSION.SDK_INT;
+        if (currentAPIVersion >= android.os.Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(context,
+                    Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.shouldShowRequestPermissionRationale(
+                        (Activity) context,
+                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                    showDialog("External storage", context,
+                            Manifest.permission.READ_EXTERNAL_STORAGE);
 
+                } else {
+                    ActivityCompat
+                            .requestPermissions(
+                                    (Activity) context,
+                                    new String[] { Manifest.permission.READ_EXTERNAL_STORAGE },
+                                    MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+                }
+                return false;
+            } else {
+                return true;
+            }
+
+        } else {
+            return true;
+        }
+    }
+
+    public void showDialog(final String msg, final Context context,
+                           final String permission) {
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
+        alertBuilder.setCancelable(true);
+        alertBuilder.setTitle("Permission necessary");
+        alertBuilder.setMessage(msg + " permission is necessary");
+        alertBuilder.setPositiveButton(android.R.string.yes,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        ActivityCompat.requestPermissions((Activity) context,
+                                new String[] { permission },
+                                MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+                    }
+                });
+        AlertDialog alert = alertBuilder.create();
+        alert.show();
+    }
 }

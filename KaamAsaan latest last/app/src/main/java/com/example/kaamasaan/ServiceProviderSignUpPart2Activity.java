@@ -57,10 +57,10 @@ public class ServiceProviderSignUpPart2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_provider_sign_up_part2);
         mfont = Typeface.createFromAsset(this.getAssets(), "fonts/KaushanScript-Regular.otf");
-        txt_title = findViewById(R.id.tv_title_signup2);
+      //  txt_title = findViewById(R.id.tv_title_signup2);
         txt_radius_value = findViewById(R.id.radius_value);
         seekBar = findViewById(R.id.seekBar);
-        txt_title.setTypeface(mfont);
+       // txt_title.setTypeface(mfont);
         txt_radius_value.setText("2");
         lv = findViewById(R.id.list_categories);
         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);

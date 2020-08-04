@@ -9,7 +9,8 @@
     android:scrollbarSize="5dip"
     android:fadeScrollbars="false"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rsb="http://schemas.android.com/tools">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -48,42 +49,17 @@
                 android:textSize="15sp"
                 android:gravity="top"></EditText>
 
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="30dp"
-                android:id="@+id/tv_latitude"
-                android:layout_below="@+id/ed_description"
-                android:textSize="10sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/colorAccent"
-                android:background="@drawable/imageview_border"
-                >
 
-            </TextView>
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="30dp"
-                android:id="@+id/tv_longitude"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/ed_description"
-                android:layout_toRightOf="@id/tv_latitude"
-                android:textSize="10sp"
-                android:textColor="@color/colorAccent"
-                android:background="@drawable/imageview_border"
-                >
-
-            </TextView>
 
             <Button
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_below="@id/ed_description"
-                android:layout_toRightOf="@id/tv_longitude"
+
                 android:text="Choose Location"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:textSize="10sp"
                 android:textColor="@color/colorWhite"
                 android:background="@color/colorSapphireBlue"
@@ -92,246 +68,68 @@
 
             </Button>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_below="@+id/btn_chooselocation"
-                android:id="@+id/linear_layout_pics"
-                android:background="@drawable/rounded_border_simple"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                >
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:id="@+id/iv_pic1"
-                    android:background="@drawable/imageview_border"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/uploadphoto"
-                   >
-
-                </androidx.appcompat.widget.AppCompatImageView>
-
-                <ImageButton
-                    android:id="@+id/btn_pic1"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/upload18x18"
-                    android:background="@color/colorSapphireBlue"
-                    android:layout_below="@+id/iv_pic1"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="2dp"
-                    ></ImageButton>
-                <ImageButton
-                    android:id="@+id/btn_rem1"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/delete"
-                    android:background="@color/colorWhite"
-                    android:layout_below="@+id/iv_pic1"
-                    android:layout_toRightOf="@+id/btn_pic1"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="2dp"
-                    ></ImageButton>
 
 
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:id="@+id/iv_pic2"
-                    android:background="@drawable/imageview_border"
-                    android:layout_toRightOf="@id/iv_pic1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/uploadphoto"
-
-                    >
-
-                </androidx.appcompat.widget.AppCompatImageView>
-
-                <ImageButton
-                android:id="@+id/btn_pic2"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/upload18x18"
-                android:background="@color/colorSapphireBlue"
-                android:layout_below="@+id/iv_pic1"
-                android:layout_toRightOf="@id/iv_pic1"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="2dp"
-                ></ImageButton>
-
-
-                <ImageButton
-                    android:id="@+id/btn_rem2"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/delete"
-                    android:background="@color/colorWhite"
-                    android:layout_below="@+id/iv_pic1"
-                    android:layout_toRightOf="@id/btn_pic2"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="2dp"
-                    ></ImageButton>
-
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/iv_pic3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@id/iv_pic2"
-                    android:background="@drawable/imageview_border"
-                    android:scaleType="fitXY"
-                    android:layout_marginTop="5dp"
-                    app:srcCompat="@drawable/uploadphoto"
-                    >
-
-                </androidx.appcompat.widget.AppCompatImageView>
-
-                <ImageButton
-                    android:id="@+id/btn_pic3"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/upload18x18"
-                    android:background="@color/colorSapphireBlue"
-                    android:layout_below="@+id/iv_pic1"
-                    android:layout_toRightOf="@id/iv_pic2"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="2dp"
-                    ></ImageButton>
-
-                <ImageButton
-                    android:id="@+id/btn_rem3"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/delete"
-                    android:background="@color/colorWhite"
-                    android:layout_below="@+id/iv_pic1"
-                    android:layout_toRightOf="@id/btn_pic3"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="2dp"
-                    ></ImageButton>
-
-
-            </RelativeLayout>
-
-            <TextView
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lbl_categories"
-                android:textSize="15sp"
+                android:id="@+id/spinner_category"
+                android:textSize="20sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Choose Category"
                 android:textColor="@color/colorSapphireBlue"
-                android:background="@drawable/rounded_border_simple"
-                android:layout_below="@id/linear_layout_pics">
+                android:layout_below="@id/btn_chooselocation">
 
 
-            </TextView>
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_below="@+id/lbl_categories"
-                android:id="@+id/list_categories"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/rounded_border_simple"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:scrollbarThumbVertical="@color/colorSapphireBlue"
-                android:fadeScrollbars="false"
-                android:scrollbarSize="5dip"
-                ></ListView>
+            </Spinner>
 
             <TextView
                 android:id="@+id/lbl_rating"
-                android:layout_width="80dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/list_categories"
-                android:layout_marginTop="10dp"
+                android:layout_below="@id/spinner_category"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/rounded_border_simple"
-                android:text="Rating:"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:text="Choose rating under which you want service providers:"
                 android:textColor="@color/colorSapphireBlue"
-                android:textSize="20sp" />
-
-
+                android:textSize="10sp" />
+             <RatingBar
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/rating_bar"
+                 android:layout_below="@+id/lbl_rating"
+                 android:numStars="5"
+                 android:layout_centerHorizontal="true"
+                 android:progressTint="@color/mainaccent"
+                 android:rating="1"
+                 ></RatingBar>
             <TextView
-                android:id="@+id/txt_rating"
+                android:id="@+id/lbl_cost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/list_categories"
+                android:layout_below="@id/rating_bar"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@+id/lbl_rating"
-                android:background="@drawable/rounded_border_simple"
-                android:hint="Min: 1, Max: 5"
-                android:inputType="number"
-                android:textSize="20sp"></TextView>
+                android:textAlignment="center"
+                android:text="Select minimum and maximum visit cost(PKR)"
+                android:textColor="@color/colorSapphireBlue"
+                android:textSize="10sp" />
 
-            <SeekBar
-                android:id="@+id/seekBar"
-                android:max="5"
-                android:min="1"
-                android:progress="2"
+            <com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar
+                android:id="@+id/rangeSeekbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="10dip"
-                android:maxHeight="10dip"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/txt_rating"
-                android:layout_marginTop="10dp"
+                android:layout_below="@id/lbl_cost"
+                rsb:absoluteMaxValue="500"
+                rsb:absoluteMinValue="100"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/rounded_border_simple"
-                android:splitTrack="false"/>
+                android:background="@color/mainaccent"
 
+                />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/linear_layout"
-                android:layout_below="@+id/seekBar"
-                android:orientation="horizontal"
-                android:weightSum="2"
-                >
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ed_minvisitcost"
-                    android:hint="Min Visit Cost"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/rounded_border_simple"
-                    android:textSize="20sp"
-                    android:layout_weight="1"
-                    android:inputType="number"
-
-                    ></EditText>
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ed_maxvisitcost"
-                    android:hint="Max Visit Cost"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/rounded_border_simple"
-                    android:textSize="20sp"
-                    android:layout_weight="1"
-                    android:inputType="number"
-                    ></EditText>
-
-            </LinearLayout>
 
 
 
@@ -341,15 +139,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-               android:layout_below="@+id/linear_layout"
-                android:id="@+id/btn_broadcast"
+               android:layout_below="@+id/rangeSeekbar"
+                android:id="@+id/btn_uploadimages"
                 android:background="@color/colorSapphireBlue"
                 android:textColor="@color/colorWhite"
                 android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
-                android:text=" Send Broadcast"
+                android:text=" Upload Images"
                 >
 
             </Button>

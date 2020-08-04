@@ -45,13 +45,13 @@ public class CustomerProfileFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    TextView txtName,txtJobs,txtReviews;;
+    TextView txtName,txtJobs,txtReviews,rating;
     ImageButton imageButton;
     Typeface mfont;
     CircleImageView imv;
     ArrayList<WorkRating> alWorkRating;
     ListView lv_reviews;
-    RatingBar ratingBar1,ratingBar2,ratingBar3,ratingBar4,ratingBar5;
+    RatingBar ratingBar5;
 
 
 
@@ -98,13 +98,10 @@ public class CustomerProfileFragment extends Fragment {
         imageButton = view.findViewById(R.id.btn_edit_name);
         imv = view.findViewById(R.id.iv_prof_pic);
         txtName.setText(MainActivity.mcustomer.getFullName());
-        ratingBar1 = view.findViewById(R.id.ratingbar1);
-        ratingBar2 = view.findViewById(R.id.ratingbar2);
-        ratingBar3 = view.findViewById(R.id.ratingbar3);
-        ratingBar4 = view.findViewById(R.id.ratingbar4);
         ratingBar5 = view.findViewById(R.id.ratingbar5); txtReviews = view.findViewById(R.id.txt_reviews);
         txtJobs = view.findViewById(R.id.txt_jobs);
         lv_reviews = view.findViewById(R.id.lv_reviews);
+        rating = view.findViewById(R.id.ratingView);
 
         getLatestData();
 
@@ -116,6 +113,7 @@ public class CustomerProfileFragment extends Fragment {
         });
 
 
+        txtJobs.setVisibility(View.GONE);
         return view;
     }
 
@@ -156,7 +154,6 @@ public class CustomerProfileFragment extends Fragment {
 
 
 
-
             return convertView;
         }
     }
@@ -170,23 +167,12 @@ public class CustomerProfileFragment extends Fragment {
                 for(DataSnapshot ssn: dataSnapshot.getChildren()){
                    Customer customer = ssn.getValue(Customer.class);
                     if( customer.getId().equals(MainActivity.mcustomer.getId())){
-                        int combinedRating = (customer.getResponseRating()+customer.getAverageWorkRating())/2;
+                        int combinedRating = customer.getAverageWorkRating();
 
-                        if( combinedRating ==1){
-                            ratingBar1.setRating( combinedRating );
-                        }
-                        else if (combinedRating ==2){
-                            ratingBar2.setRating( combinedRating );
-                        }
-                        else if(combinedRating ==3){
-                            ratingBar3.setRating( combinedRating );
-                        }
-                        else if( combinedRating ==4){
-                            ratingBar4.setRating( combinedRating );
-                        }
-                        else if( combinedRating ==5){
+
                             ratingBar5.setRating( combinedRating );
-                        }
+
+                        rating.setText(combinedRating + "");
 
                         alWorkRating =  customer.getWorkRatingList();
                         if(alWorkRating==null){

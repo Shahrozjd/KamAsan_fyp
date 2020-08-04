@@ -50,16 +50,15 @@
     </TextView>
 
     <TextView
+        android:id="@+id/txt_from"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txt_from"
         android:layout_below="@+id/lbl_received_visit_request_Id"
-        android:layout_toRightOf="@+id/lbl_from"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
-        ></TextView>
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/lbl_from"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"></TextView>
 
 
     <TextView

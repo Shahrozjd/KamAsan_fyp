@@ -343,13 +343,18 @@ public class ServiceProviderNotificationsFragment extends Fragment {
                 }
             });
 
-            btn_give_rating.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    showRatingDialog(txt_customer_name.getText().toString());
+             if(alCompletedVisits.get(position).getRatedByServiceProvider().equals("no")) {
+                 btn_give_rating.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                     public void onClick(View v) {
+                         showRatingDialog(txt_customer_name.getText().toString(), alCompletedVisits.get(position).getRequestId());
 
-                }
-            });
+                     }
+                 });
+             }
+             else{
+                 btn_give_rating.setVisibility(View.INVISIBLE);
+             }
             btn_delete_completed_visit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -361,7 +366,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
                 }
             });
 
-
+            btn_give_rating.setVisibility(View.GONE);
 
             return convertView;
         }
@@ -464,7 +469,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
     }
 
 
-    public void manuallyGiveRatingToCustomer(final String customerUserName, final int rating){
+    public void manuallyGiveRatingToCustomer(final String customerUserName, final int rating, final String visitRequestID){
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users").child("Customers");
         final String[] CustomerId = new String[1];
         final String[] CustomerImageUrl = new String[1];
@@ -492,6 +497,12 @@ public class ServiceProviderNotificationsFragment extends Fragment {
                             averageResponseTimeRatingOfCustomer= sum / responseTimeRatingArrayListOfCustomer.size();
                             customer[0].setResponseRating(averageResponseTimeRatingOfCustomer );
 
+                            // now getting completed visits lists of the Service Provider and setting the "ratedbyServiceProvide"= 'yes' to this specifice visitRequest
+
+                                     updateVisitRatingStatusByServiceProviderofSpecificVisit(visitRequestID);
+
+
+
                             break;
                         }
                         else{
@@ -504,6 +515,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
                             }
                             averageResponseTimeRatingOfCustomer  = sum / responseTimeRatingArrayListOfCustomer.size();
                             customer[0].setResponseRating(averageResponseTimeRatingOfCustomer );
+                            updateVisitRatingStatusByServiceProviderofSpecificVisit(visitRequestID);
                             break;
                         }
                     }
@@ -521,8 +533,43 @@ public class ServiceProviderNotificationsFragment extends Fragment {
 
     }
 
+    // now getting completed visits lists of the Service Provider and setting the "ratedbyServiceProvide"= 'yes' to this specifice visitRequest after visit completion
+      public void updateVisitRatingStatusByServiceProviderofSpecificVisit(final String visitRequestID){
+          final ArrayList<VisitRequest>[] completedVistsOfServiceProvider = new ArrayList[]{new ArrayList<>()};
+      final VisitRequest visitRequest;
+          final ServiceProvider[] serviceProvider = new ServiceProvider[1];
+      final DatabaseReference  sp_ref = FirebaseDatabase.getInstance().getReference("Users").child("ServiceProviders");
 
-    public void showRatingDialog(final String CustomerUserName){
+          sp_ref.addListenerForSingleValueEvent(new ValueEventListener() {
+              @Override
+              public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                  for(DataSnapshot ssn: dataSnapshot.getChildren()){
+                       serviceProvider[0] = ssn.getValue(ServiceProvider.class);
+                       if(serviceProvider[0].getId().equals(MainActivity.mserviceProvider.getId())){
+                           completedVistsOfServiceProvider[0] = serviceProvider[0].getCompletedVisitsList();
+
+                           for(int i = 0;i<completedVistsOfServiceProvider[0].size();i++){
+                               if(completedVistsOfServiceProvider[0].get(i).getRequestId()==visitRequestID){
+
+                                    completedVistsOfServiceProvider[0].get(i).setRatedByServiceProvider("yes");
+                                    sp_ref.child(MainActivity.mserviceProvider.getId()+"/"+"completedVisitsList").setValue(completedVistsOfServiceProvider[0]);
+                                     break;
+                               }
+                           }
+                           break;
+                       }
+                  }
+              }
+
+              @Override
+              public void onCancelled(@NonNull DatabaseError databaseError) {
+
+              }
+          });
+
+      }
+
+    public void showRatingDialog(final String CustomerUserName, final String visitRequestID){
         final Dialog dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.response_rating_dialog);
         final RatingBar ratingBar = dialog.findViewById(R.id.response_ratingbar);
@@ -537,7 +584,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
                    Toast.makeText(getActivity(),"Error: Rating must be given",Toast.LENGTH_LONG).show();
                 }
                 else{
-                    manuallyGiveRatingToCustomer(CustomerUserName,(int)ratingBar.getRating());
+                    manuallyGiveRatingToCustomer(CustomerUserName,(int)ratingBar.getRating(),visitRequestID);
                     dialog.dismiss();
                 }
 
@@ -609,7 +656,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             convertView = getActivity().getLayoutInflater().inflate(R.layout.serviceprovider_pending_work_list_row,null);
-            TextView txt_received_work_request_Id = convertView.findViewById(R.id.txt_received_work_request_Id);
+            TextView txt_pending_work_request_Id = convertView.findViewById(R.id.txt_pending_work_request_Id);
             TextView txt_from = convertView.findViewById(R.id.txt_from);
             TextView txt_start_date = convertView.findViewById(R.id.txt_startDate);
             TextView txt_end_date = convertView.findViewById(R.id.txt_endDate);
@@ -618,7 +665,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
 
 
 
-            txt_received_work_request_Id.setText(alPendingWorks.get(position).getRequestId());
+            txt_pending_work_request_Id.setText(alPendingWorks.get(position).getRequestId());
             txt_from.setText(alPendingWorks.get(position).getUserName());
             txt_start_date.setText(alPendingWorks.get(position).getStartDate());
             txt_end_date.setText(alPendingWorks.get(position).getEndDate());
@@ -670,15 +717,18 @@ public class ServiceProviderNotificationsFragment extends Fragment {
             txt_mode .setText(alCompletedWorks.get(position).getMode());
             txt_estimated_cost.setText(String.valueOf(alCompletedWorks.get(position).getEstimatedCost()));
 
-            final WorkRequest workRequest = new WorkRequest(txt_received_work_request_Id.getText().toString(),txt_from.getText().toString(),
-                    "Completed",txt_start_date.getText().toString(),txt_end_date.getText().toString(),
-                    txt_mode.getText().toString(),Integer.parseInt(txt_estimated_cost.getText().toString()));
+            if(alCompletedWorks.get(position).ratedByServiceProvider.equals("no")){
+
             btn_give_review.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showWorkRatingDialog(txt_from.getText().toString());
+                    showWorkRatingDialog(txt_from.getText().toString(),alCompletedWorks.get(position).getRequestId());
                 }
             });
+            }
+            else{
+                btn_give_review.setVisibility(View.INVISIBLE);
+            }
 
             btn_delete_work.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -694,7 +744,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
         }
     }
 
-    public void giveWorkRatingToCustomer(final String customerUserName, final WorkRating workRating){
+    public void giveWorkRatingToCustomer(final String customerUserName, final WorkRating workRating, final String workRequestID){
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users").child("Customers");
        // Toast.makeText(getActivity(),"inside rating function",Toast.LENGTH_LONG).show();
         final String[] CustomerId = new String[1];
@@ -720,6 +770,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
                             }
                             averageWorkRating = sum/alWorkRating.size();
                             customer[0].setAverageWorkRating(averageWorkRating);
+                            updateWorkRatingStatusByServiceProviderofSpecificWork(workRequestID);
                             break;
                         }
                         else{
@@ -732,6 +783,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
                             }
                             averageWorkRating = sum/alWorkRating.size();
                             customer[0].setAverageWorkRating(averageWorkRating);
+                            updateWorkRatingStatusByServiceProviderofSpecificWork(workRequestID);
                             break;
                         }
                     }
@@ -747,7 +799,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
         });
     }
 
-    public void showWorkRatingDialog(final String customerUserName){
+    public void showWorkRatingDialog(final String customerUserName, final String workRequestID){
         final Dialog dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.work_rating_dialog);
         final RatingBar ratingBar = dialog.findViewById(R.id.work_ratingbar);
@@ -768,7 +820,7 @@ public class ServiceProviderNotificationsFragment extends Fragment {
                             MainActivity.mserviceProvider.getUserName(),ed_review.getText().toString(),
                             (int)ratingBar.getRating());
                     giveWorkRatingToCustomer(customerUserName,
-                            workRating);
+                            workRating,workRequestID);
 
 
 
@@ -779,6 +831,42 @@ public class ServiceProviderNotificationsFragment extends Fragment {
         });
 
         dialog.show();
+
+    }
+
+    // now getting completed work lists of the Service Provider and setting the "ratedbyServiceProvide"= 'yes' to this specifice workRequest after work completion
+    public void updateWorkRatingStatusByServiceProviderofSpecificWork(final String workRequestID){
+        final ArrayList<WorkRequest>[] completedWorksOfServiceProvider = new ArrayList[]{new ArrayList<>()};
+        final VisitRequest workRequest;
+        final ServiceProvider[] serviceProvider = new ServiceProvider[1];
+        final DatabaseReference  sp_ref = FirebaseDatabase.getInstance().getReference("Users").child("ServiceProviders");
+
+        sp_ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ssn: dataSnapshot.getChildren()){
+                    serviceProvider[0] = ssn.getValue(ServiceProvider.class);
+                    if(serviceProvider[0].getId().equals(MainActivity.mserviceProvider.getId())){
+                        completedWorksOfServiceProvider[0] = serviceProvider[0].getCompletedWorkList();
+
+                        for(int i = 0;i<completedWorksOfServiceProvider[0].size();i++){
+                            if(completedWorksOfServiceProvider[0].get(i).getRequestId()==workRequestID){
+
+                                completedWorksOfServiceProvider[0].get(i).setRatedByServiceProvider("yes");
+                                sp_ref.child(MainActivity.mserviceProvider.getId()+"/"+"completedWorkList").setValue(completedWorksOfServiceProvider[0]);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
     }
 
