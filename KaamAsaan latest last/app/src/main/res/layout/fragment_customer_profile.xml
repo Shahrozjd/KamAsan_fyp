@@ -66,13 +66,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Name"
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:layout_below="@+id/iv_prof_pic"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:id="@+id/txt_name"
                 android:textStyle="bold"
-                android:textColor="@color/mainaccent"
+                android:textColor="#00428A"
                 android:textSize="20sp"
                 >
 
@@ -86,10 +86,10 @@
                 android:layout_below="@+id/ratingbar2"
                 android:layout_toRightOf="@+id/ratingbar2"
                 android:layout_marginTop="5dp"
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:text="Reviews:0"
-                android:textSize="16dp"
-                android:textColor="@color/mainaccent"
+                android:textSize="18dp"
+                android:textColor="#00428A"
                 >
             </TextView>
 
@@ -102,8 +102,8 @@
                 android:id="@+id/txt_jobs"
                 android:textSize="18dp"
                 android:layout_marginTop="5dp"
-                android:textAlignment="textStart"
-                android:textColor="@color/mainaccent"
+                android:textAlignment="center"
+                android:textColor="#00428A"
                 android:text="Jobs:0">
 
             </TextView>
@@ -114,23 +114,24 @@
                 android:layout_below="@+id/ratingbar2"
                 android:layout_toRightOf="@+id/ratingbar2"
                 android:layout_marginTop="5dp"
-                android:textAlignment="textStart"
-                android:text="0 Stars"
-                android:textSize="18dp"
-                android:textColor="@color/mainaccent"
+                android:textAlignment="center"
+                android:text="3.5"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#00428A"
                 >
             </TextView>
             <RatingBar
                 android:id="@+id/ratingbar5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:progressTint="@color/colorYellow"
+                android:progressTint="#00428A"
+                android:rating="1"
                 android:layout_below="@+id/ratingbar4"
                 android:layout_marginTop="3dp"
                 android:numStars="5"
-                android:layout_gravity="start"
-                style="?android:attr/ratingBarStyleSmall" />
+                android:layout_gravity="center"
+                style="?android:attr/ratingBarStyleIndicator" />
 
 
 

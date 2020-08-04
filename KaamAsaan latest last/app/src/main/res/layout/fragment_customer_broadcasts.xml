@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:id="@+id/item_scrollvw"
+<LinearLayout android:id="@+id/item_scrollvw"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_below="@+id/tv_title_signup2"
     android:layout_marginTop="50dp"
     android:layout_marginBottom="60dp"
+    android:orientation="vertical"
     android:scrollbarThumbVertical="@color/colorSapphireBlue"
     android:scrollbarSize="5dip"
     android:fadeScrollbars="false"
@@ -12,9 +13,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:rsb="http://schemas.android.com/tools">
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/mainrel"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             >
 
             <EditText
@@ -23,7 +26,7 @@
                 android:hint="Title"
                 android:id="@+id/ed_title"
                 android:background="@drawable/logintxtfield_border"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:padding="5dp"
@@ -41,11 +44,13 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:padding="5dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/logintxtfield_border"
                 android:hint="Problem/Description"
                 android:textSize="18sp"
-                android:gravity="top"></EditText>
+                android:gravity="top">
+
+            </EditText>
 
 
 
@@ -73,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner_category"
                 android:textSize="20sp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/colorSapphireBlue"
@@ -88,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/spinner_category"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:textAlignment="center"
                 android:text="Choose rating under which you want service providers:"
                 android:textColor="@color/colorBlack"
@@ -99,6 +104,8 @@
                  android:id="@+id/rating_bar"
                  android:layout_below="@+id/lbl_rating"
                  android:numStars="5"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="10dp"
                  android:layout_centerHorizontal="true"
                  android:progressTint="@color/mainaccent"
                  android:rating="1"
@@ -109,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rating_bar"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:textAlignment="center"
                 android:text="Select minimum and maximum visit cost(PKR)"
                 android:textColor="@color/colorBlack"
@@ -121,6 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lbl_cost"
                 rsb:absoluteMaxValue="500"
+                android:layout_marginTop="10dp"
                 rsb:absoluteMinValue="100"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -131,17 +139,15 @@
 
 
 
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-               android:layout_below="@+id/rangeSeekbar"
+                android:layout_below="@+id/rangeSeekbar"
                 android:id="@+id/btn_uploadimages"
                 android:background="@drawable/login_button_border"
                 android:textColor="@color/colorWhite"
-                android:textSize="15sp"
-                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:text=" Add Images"
@@ -149,9 +155,12 @@
 
             </Button>
 
-        </RelativeLayout>
+
+        </LinearLayout>
 
 
-    </ScrollView>
+
+
+</LinearLayout>
 
 
