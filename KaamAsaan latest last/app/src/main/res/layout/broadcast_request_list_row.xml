@@ -113,11 +113,10 @@
 
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:padding="5dp"
             android:id="@+id/btn_willing"
-            android:visibility="invisible"
             android:layout_below="@+id/lbl_sp_category"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="2dp"

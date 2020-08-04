@@ -221,6 +221,8 @@ public class ServiceProviderBroadcastsFragment extends Fragment {
             TextView  txt_broadcast_title= convertView.findViewById(R.id.txt_broadcast_title);
             TextView  txt_sp_category= convertView.findViewById(R.id. txt_sp_category);
             Button btn_detail = convertView.findViewById(R.id.btn_details);
+            Button btn_willing = convertView.findViewById(R.id.btn_willing);
+            btn_willing.setVisibility(convertView.GONE);
 
             txt_broadcast_req_id.setText(broadCastList.get(position).getId());
             txt_broadcast_title.setText(broadCastList.get(position).getTitle());
