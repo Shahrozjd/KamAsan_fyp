@@ -9,6 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_lbl"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp"
         android:text="Upload upto 6 images"
         android:textAlignment="center"
         ></TextView>
@@ -29,11 +31,12 @@
             android:layout_height="wrap_content"
 
             >
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/iv_pic1"
-                android:background="@drawable/imageview_border"
+                android:background="@drawable/login_button_border"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:scaleType="fitXY"
@@ -46,8 +49,8 @@
                 android:layout_below="@+id/iv_pic1"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="2dp"
-                android:background="@color/colorSapphireBlue"
-                android:src="@drawable/upload18x18"></ImageButton>
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_image_white_24"></ImageButton>
 
             <ImageButton
                 android:id="@+id/btn_rem1"
@@ -57,8 +60,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_toRightOf="@+id/btn_pic1"
-                android:background="@color/colorWhite"
-                android:src="@drawable/delete"></ImageButton>
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_delete_white_24"></ImageButton>
         </RelativeLayout>
 
         <RelativeLayout
@@ -72,7 +75,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/iv_pic2"
-                android:background="@drawable/imageview_border"
+                android:background="@drawable/login_button_border"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:scaleType="fitXY"
@@ -85,16 +88,17 @@
                 android:layout_below="@id/iv_pic2"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="2dp"
-                android:background="@color/colorSapphireBlue"
-                android:src="@drawable/upload18x18"></ImageButton>
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_image_white_24"></ImageButton>
             <ImageButton
                 android:id="@+id/btn_rem2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/delete"
+
                 android:layout_below="@id/iv_pic2"
                 android:layout_toRightOf="@+id/btn_pic2"
-                android:background="@color/colorWhite"
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_delete_white_24"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 ></ImageButton>
@@ -110,7 +114,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/iv_pic3"
-                android:background="@drawable/imageview_border"
+                android:background="@drawable/login_button_border"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:scaleType="fitXY"
@@ -123,16 +127,17 @@
                 android:layout_below="@id/iv_pic3"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="2dp"
-                android:background="@color/colorSapphireBlue"
-                android:src="@drawable/upload18x18"></ImageButton>
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_image_white_24"></ImageButton>
             <ImageButton
                 android:id="@+id/btn_rem3"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/delete"
+
                 android:layout_below="@id/iv_pic3"
                 android:layout_toRightOf="@+id/btn_pic3"
-                android:background="@color/colorWhite"
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_delete_white_24"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 ></ImageButton>
@@ -150,7 +155,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/iv_pic4"
-                android:background="@drawable/imageview_border"
+                android:background="@drawable/login_button_border"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:scaleType="fitXY"
@@ -163,16 +168,17 @@
                 android:layout_below="@id/iv_pic4"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="2dp"
-                android:background="@color/colorSapphireBlue"
-                android:src="@drawable/upload18x18"></ImageButton>
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_image_white_24"></ImageButton>
             <ImageButton
                 android:id="@+id/btn_rem4"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/delete"
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_delete_white_24"
                 android:layout_below="@id/iv_pic4"
                 android:layout_toRightOf="@+id/btn_pic4"
-                android:background="@color/colorWhite"
+
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 ></ImageButton>
@@ -190,7 +196,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/iv_pic5"
-                android:background="@drawable/imageview_border"
+                android:background="@drawable/login_button_border"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:scaleType="fitXY"
@@ -203,16 +209,17 @@
                 android:layout_below="@id/iv_pic5"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="2dp"
-                android:background="@color/colorSapphireBlue"
-                android:src="@drawable/upload18x18"></ImageButton>
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_image_white_24"></ImageButton>
             <ImageButton
                 android:id="@+id/btn_rem5"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/delete"
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_delete_white_24"
                 android:layout_below="@id/iv_pic5"
                 android:layout_toRightOf="@+id/btn_pic5"
-                android:background="@color/colorWhite"
+
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 ></ImageButton>
@@ -230,7 +237,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/iv_pic6"
-                android:background="@drawable/imageview_border"
+                android:background="@drawable/login_button_border"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:scaleType="fitXY"
@@ -243,16 +250,17 @@
                 android:layout_below="@id/iv_pic6"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="2dp"
-                android:background="@color/colorSapphireBlue"
-                android:src="@drawable/upload18x18"></ImageButton>
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_image_white_24"></ImageButton>
             <ImageButton
                 android:id="@+id/btn_rem6"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/delete"
+                android:background="@drawable/circle_backgound4"
+                android:src="@drawable/ic_baseline_delete_white_24"
                 android:layout_below="@id/iv_pic6"
                 android:layout_toRightOf="@+id/btn_pic6"
-                android:background="@color/colorWhite"
+
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 ></ImageButton>
@@ -263,7 +271,7 @@
     </GridLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:id="@+id/linear_layout2"
         android:orientation="vertical"
         android:layout_weight="1"
@@ -275,11 +283,9 @@
             android:layout_alignParentBottom="true"
             android:id="@+id/btn_broadcast"
             android:layout_marginTop="10dp"
-            android:background="@color/colorSapphireBlue"
+            android:background="@drawable/login_button_border"
             android:textColor="@color/colorWhite"
             android:textSize="15sp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
             android:text=" Send Broadcast"
             >
 

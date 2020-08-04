@@ -4,11 +4,13 @@
     android:id="@+id/item_scrollvw"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F0F0F0"
     android:layout_below="@+id/tv_title_signup2"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F0F0F0F0"
         tools:context=".SendVisitRequestActivity"
         >
         <TextView
@@ -52,7 +54,7 @@
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="@color/mainaccent"
-                    android:background="@color/colorWhite"
+
                     android:id="@+id/lbl_time"
                     android:layout_marginTop="20dp"
                     >
@@ -91,7 +93,7 @@
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="@color/mainaccent"
-                    android:background="@color/colorWhite"
+
                     android:id="@+id/lbl_date"
                     android:layout_marginTop="10dp"
                     >
@@ -126,7 +128,6 @@
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="@color/mainaccent"
-                    android:background="@color/colorWhite"
                     android:id="@+id/lbl_duration"
                     android:layout_marginTop="10dp"
                     ></TextView>
@@ -169,7 +170,6 @@
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="@color/mainaccent"
-                    android:background="@color/colorWhite"
                     android:id="@+id/lbl_cost"
                     android:layout_marginTop="10dp"
                     ></TextView>

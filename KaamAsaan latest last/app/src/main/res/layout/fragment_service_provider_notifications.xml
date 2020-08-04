@@ -49,7 +49,8 @@
                 android:layout_below="@id/txt_sent_visit_request"
                 android:id="@+id/lv_sent_visit_requests"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
                 android:dividerHeight="10dp"
                 android:divider="@color/colorWhite"
                 ></ListView>
@@ -86,7 +87,8 @@
                 android:id="@+id/lv_pending_visits"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
-                android:layout_margin="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
                 android:dividerHeight="10dp"
                 android:divider="@color/colorWhite"
                 ></ListView>
@@ -121,7 +123,8 @@
                 android:id="@+id/lv_completed_visits"
                 android:layout_centerHorizontal="true"
                 android:dividerHeight="10dp"
-                android:layout_margin="5dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
                 android:divider="@color/colorWhite"
                 android:layout_marginTop="5dp"
                 ></ListView>
@@ -157,7 +160,8 @@
                 android:id="@+id/lv_sent_work_requests"
                 android:layout_centerHorizontal="true"
                 android:dividerHeight="10dp"
-                android:layout_margin="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
                 android:divider="@color/colorWhite"
                 android:layout_marginTop="5dp"
                 ></ListView>
@@ -194,7 +198,8 @@
                 android:id="@+id/lv_pending_works"
                 android:layout_centerHorizontal="true"
                 android:dividerHeight="10dp"
-                android:layout_margin="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
                 android:divider="@color/colorWhite"
                 android:layout_marginTop="5dp"
                 ></ListView>
@@ -231,7 +236,8 @@
                 android:id="@+id/lv_completed_works"
                 android:layout_centerHorizontal="true"
                 android:dividerHeight="10dp"
-                android:layout_margin="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
                 android:divider="@color/colorWhite"
                 android:layout_marginTop="5dp"
 

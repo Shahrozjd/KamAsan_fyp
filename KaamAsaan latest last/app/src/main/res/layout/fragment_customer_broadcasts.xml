@@ -22,16 +22,15 @@
                 android:layout_height="wrap_content"
                 android:hint="Title"
                 android:id="@+id/ed_title"
-                android:background="@drawable/rounded_border_simple"
+                android:background="@drawable/logintxtfield_border"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
+                android:padding="5dp"
                 android:shadowDx="2"
                 android:shadowDy="4"
                 android:shadowColor="@color/colorBlack"
-                android:textSize="20sp">
+                android:textSize="18sp">
             </EditText>
 
             <EditText
@@ -41,28 +40,27 @@
                 android:layout_below="@id/ed_title"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
+                android:padding="5dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/rounded_border_simple"
+                android:background="@drawable/logintxtfield_border"
                 android:hint="Problem/Description"
-                android:textSize="15sp"
+                android:textSize="18sp"
                 android:gravity="top"></EditText>
 
 
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/ed_description"
 
                 android:text="Choose Location"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:textSize="10sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorWhite"
-                android:background="@color/colorSapphireBlue"
+                android:background="@drawable/login_button_border"
                 android:id="@+id/btn_chooselocation"
                 >
 
@@ -93,8 +91,8 @@
                 android:layout_marginTop="10dp"
                 android:textAlignment="center"
                 android:text="Choose rating under which you want service providers:"
-                android:textColor="@color/colorSapphireBlue"
-                android:textSize="10sp" />
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
              <RatingBar
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -114,8 +112,8 @@
                 android:layout_marginTop="10dp"
                 android:textAlignment="center"
                 android:text="Select minimum and maximum visit cost(PKR)"
-                android:textColor="@color/colorSapphireBlue"
-                android:textSize="10sp" />
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
 
             <com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar
                 android:id="@+id/rangeSeekbar"
@@ -126,7 +124,6 @@
                 rsb:absoluteMinValue="100"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/mainaccent"
 
                 />
 
@@ -141,13 +138,13 @@
                 android:layout_alignParentBottom="true"
                android:layout_below="@+id/rangeSeekbar"
                 android:id="@+id/btn_uploadimages"
-                android:background="@color/colorSapphireBlue"
+                android:background="@drawable/login_button_border"
                 android:textColor="@color/colorWhite"
                 android:textSize="15sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
-                android:text=" Upload Images"
+                android:text=" Add Images"
                 >
 
             </Button>

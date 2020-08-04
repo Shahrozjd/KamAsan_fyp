@@ -9,6 +9,7 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F0F0F0"
     tools:context=".SendVisitRequestActivity"
     >
     <TextView
@@ -53,7 +54,6 @@
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/mainaccent"
-                android:background="@color/colorWhite"
                 android:id="@+id/lbl_time"
                 android:layout_marginTop="20dp"
                 >
@@ -92,7 +92,6 @@
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/mainaccent"
-                android:background="@color/colorWhite"
                 android:id="@+id/lbl_date"
                 android:layout_marginTop="10dp"
                 >
@@ -127,7 +126,6 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:textColor="@color/mainaccent"
-            android:background="@color/colorWhite"
             android:id="@+id/lbl_duration"
             android:layout_marginTop="10dp"
             ></TextView>
@@ -170,7 +168,6 @@
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/mainaccent"
-                android:background="@color/colorWhite"
                 android:id="@+id/lbl_cost"
                 android:layout_marginTop="10dp"
                 ></TextView>
@@ -183,6 +180,7 @@
                 android:inputType="number"
                 android:textColor="@color/colorBlack"
                 android:padding="5dp"
+                android:hint="Cost"
                 android:background="@drawable/logintxtfield_border"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"

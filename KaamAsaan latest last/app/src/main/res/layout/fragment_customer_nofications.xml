@@ -50,8 +50,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/lv_broadcasts"
-               android:layout_below="@+id/lbl_broadcasts"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_below="@+id/lbl_broadcasts"
                 android:layout_centerHorizontal="true"
                 android:dividerHeight="10dp"
 
@@ -90,7 +91,8 @@
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
                 android:id="@+id/lv_received_visit_requests"
                 android:layout_below="@+id/lbl_visit_requests_from_customers"
                 android:layout_marginTop="5dp"
@@ -129,7 +131,8 @@
                 android:layout_below="@+id/lbl_pending_visits_of_customers"
                 android:layout_marginTop="5dp"
                 android:dividerHeight="5dp"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
                 android:layout_centerHorizontal="true"
                 > </ListView>
 
@@ -164,7 +167,8 @@
                 android:id="@+id/lv_completed_visits"
                 android:layout_below="@+id/lbl_completed_visits_of"
                 android:dividerHeight="5dp"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
                 android:layout_centerHorizontal="true"
                 > </ListView>
 
@@ -204,7 +208,8 @@
                 android:id="@+id/lv_received_work_requests"
                 android:layout_centerHorizontal="true"
                 android:dividerHeight="5dp"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
                 android:layout_marginTop="5dp"
                 ></ListView>
 
@@ -242,7 +247,8 @@
                 android:id="@+id/lv_pending_works"
                 android:layout_centerHorizontal="true"
                 android:dividerHeight="5dp"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
                 android:layout_marginTop="5dp"
                 ></ListView>
 
@@ -280,7 +286,8 @@
                 android:id="@+id/lv_completed_works"
                 android:layout_centerHorizontal="true"
                 android:dividerHeight="5dp"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
                 android:layout_marginTop="5dp"
                 ></ListView>
 

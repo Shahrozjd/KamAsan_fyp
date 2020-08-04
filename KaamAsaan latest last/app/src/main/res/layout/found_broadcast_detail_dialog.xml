@@ -426,7 +426,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
+        android:layout_marginTop="10dp"
         android:gravity="center">
         <Button
             android:layout_width="wrap_content"
@@ -443,10 +443,11 @@
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btn_send_message"
-            android:layout_width="70dp"
+            android:layout_width="10dp"
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="2dp"
+            android:visibility="invisible"
             android:layout_marginTop="5dp"
             android:padding="5dp"
             android:background="@drawable/login_button_border"

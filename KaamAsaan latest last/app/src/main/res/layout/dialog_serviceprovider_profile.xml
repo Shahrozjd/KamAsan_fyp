@@ -22,7 +22,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:paddingTop="10dp"
             android:gravity="clip_vertical|top|center"
             android:orientation="vertical"
             >
@@ -33,8 +32,8 @@
                 android:layout_height="120dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/customer"
-                app:civ_border_color="@color/mainaccent"
-                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorBlack"
+                app:civ_border_width="0.5dp"
                 >
 
             </de.hdodenhof.circleimageview.CircleImageView>
@@ -45,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:gravity="center"
             android:layout_weight="0.7"
             android:paddingStart="10dp"
             >
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Name"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:layout_below="@+id/iv_prof_pic"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
@@ -64,29 +64,7 @@
                 >
 
             </TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/rating_view"
-                android:layout_below="@+id/ratingbar2"
-                android:layout_toRightOf="@+id/ratingbar2"
-                android:layout_marginTop="5dp"
-                android:textAlignment="textStart"
-                android:text="0"
-                android:textSize="16dp"
-                android:textColor="@color/mainaccent"
-                >
-            </TextView>
-            <RatingBar
-                android:id="@+id/ratingbar5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:progressTint="@color/colorYellow"
-                android:layout_below="@+id/ratingbar4"
-                android:layout_marginTop="3dp"
-                android:numStars="5"
-                style="?android:attr/ratingBarStyleSmall" />
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -104,7 +82,7 @@
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ratingbar2"
                 android:layout_toRightOf="@+id/txt_pipe"
@@ -115,6 +93,31 @@
                 android:text="Jobs:0">
 
             </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rating_view"
+                android:layout_below="@+id/ratingbar2"
+                android:layout_toRightOf="@+id/ratingbar2"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:text="0"
+                android:textSize="18dp"
+                android:textColor="@color/mainaccent"
+                >
+            </TextView>
+            <RatingBar
+                android:id="@+id/ratingbar5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:progressTint="@color/colorYellow"
+                android:layout_gravity="start"
+                android:layout_below="@+id/ratingbar4"
+                android:layout_marginTop="3dp"
+                android:numStars="5"
+                style="?android:attr/ratingBarStyleSmall" />
 
 
 
@@ -131,24 +134,9 @@
         >
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txt_lbl_reviews"
-            android:layout_below="@+id/ratingbar5"
-            android:text="Reviews:"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp"
-            android:textColor="@color/colorSapphireBlue"
-            android:textAlignment="center"
-            >
-
-        </TextView>
-
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/txt_lbl_reviews"
             android:layout_marginTop="5dp"
             android:id="@+id/lv_reviews"
             >
