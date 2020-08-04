@@ -16,7 +16,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         >
 
@@ -28,9 +28,9 @@
         android:layout_toRightOf="@+id/lbl_received_visit_request_Id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="7dp"
         android:layout_marginLeft="5dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/colorBlack"
         />
 
@@ -43,7 +43,7 @@
         android:text="From:"
         android:layout_marginTop="10dp"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         >
 
@@ -55,10 +55,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/lbl_received_visit_request_Id"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_toRightOf="@+id/lbl_from"
         android:textColor="@color/colorBlack"
-        android:textSize="15sp"></TextView>
+        android:textSize="14sp"></TextView>
 
 
     <TextView
@@ -70,7 +70,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         ></TextView>
     <TextView
@@ -79,9 +79,9 @@
         android:id="@+id/txt_potential_time"
         android:layout_below="@+id/lbl_from"
         android:layout_toRightOf="@id/lbl_potential_time"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="5dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/colorBlack"
         ></TextView>
 
@@ -94,7 +94,7 @@
         android:text="Duration (Hours):"
         android:layout_marginTop="10dp"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         ></TextView>
     <TextView
@@ -103,9 +103,10 @@
         android:id="@+id/txt_duration"
         android:layout_below="@+id/lbl_potential_time"
         android:layout_toRightOf="@id/lbl_duration"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="5dp"
-        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"
         ></TextView>
 
     <TextView
@@ -117,7 +118,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         ></TextView>
 
@@ -127,9 +128,9 @@
         android:id="@+id/txt_visit_cost"
         android:layout_below="@+id/lbl_duration"
         android:layout_toRightOf="@id/lbl_visit_cost"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="5dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/colorBlack"
         >
 

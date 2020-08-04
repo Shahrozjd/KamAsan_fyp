@@ -12,7 +12,7 @@
         android:id="@+id/lbl_broadcast_req_id"
         android:layout_marginTop="2dp"
         android:layout_marginLeft="2dp"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="@color/mainaccent"
         >
@@ -23,9 +23,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_broadcast_req_id"
         android:layout_toRightOf="@+id/lbl_broadcast_req_id"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="2dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/colorBlack"
         >
     </TextView>
@@ -38,7 +38,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginTop="5dp"
         android:text="Subject:"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="@color/mainaccent">
 
@@ -49,10 +49,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_broadcast_title"
         android:layout_below="@+id/lbl_broadcast_req_id"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="7dp"
         android:layout_marginLeft="3dp"
         android:layout_toRightOf="@+id/lbl_broadcast_title"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/colorBlack"
         android:maxLines="1"
         android:ellipsize="end"
@@ -67,7 +67,7 @@
         android:layout_marginLeft="2dp"
         android:text="Service Category:"
         android:layout_marginTop="5dp"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="@color/mainaccent"
         >
@@ -79,10 +79,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_sp_category"
         android:layout_below="@+id/lbl_broadcast_title"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="7dp"
         android:layout_marginLeft="3dp"
         android:layout_toRightOf="@+id/lbl_sp_category"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/colorBlack"
         >
     </TextView>

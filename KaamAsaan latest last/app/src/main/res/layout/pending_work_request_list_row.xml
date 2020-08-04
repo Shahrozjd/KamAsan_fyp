@@ -16,7 +16,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         >
 
@@ -28,9 +28,9 @@
         android:layout_toRightOf="@+id/lbl_received_visit_request_Id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="7dp"
         android:layout_marginLeft="5dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/colorBlack"
         />
 
@@ -43,7 +43,7 @@
         android:layout_marginTop="10dp"
         android:text="From:"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         >
 
@@ -55,8 +55,8 @@
         android:id="@+id/txt_from"
         android:layout_below="@+id/lbl_received_visit_request_Id"
         android:layout_toRightOf="@+id/lbl_from"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="5dp"
         android:textColor="@color/colorBlack"
         ></TextView>
@@ -71,7 +71,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         >
 
@@ -82,9 +82,9 @@
         android:id="@+id/txt_startDate"
         android:layout_below="@+id/lbl_from"
         android:layout_toRightOf="@id/lbl_startDate"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="5dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/colorBlack"
         >
 
@@ -99,7 +99,7 @@
         android:text="End Date"
         android:layout_marginTop="10dp"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         ></TextView>
     <TextView
@@ -108,9 +108,9 @@
         android:id="@+id/txt_endDate"
         android:layout_below="@+id/lbl_startDate"
         android:layout_toRightOf="@id/lbl_endDate"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="5dp"
-        android:textSize="18dp"
+        android:textSize="14dp"
         android:textColor="@color/colorBlack"
         ></TextView>
 
@@ -122,7 +122,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:text="Mode"
         >
@@ -133,9 +133,9 @@
         android:id="@+id/txt_mode"
         android:layout_below="@id/lbl_endDate"
         android:layout_toRightOf="@id/lbl_mode"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="5dp"
-        android:textSize="18dp"
+        android:textSize="14dp"
         android:textColor="@color/colorBlack"
         >
     </TextView>
@@ -149,7 +149,7 @@
         android:layout_marginTop="10dp"
         android:text="Estimated Cost:"
         android:textColor="@color/mainaccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         >
 
@@ -161,9 +161,9 @@
         android:id="@+id/txt_estimated_cost"
         android:layout_below="@+id/lbl_mode"
         android:layout_toRightOf="@id/lbl_estimated_cost"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="5dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textColor="@color/colorBlack"
         >
 
