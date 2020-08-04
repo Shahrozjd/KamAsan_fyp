@@ -84,7 +84,7 @@ public class CustomerBroadcastsFragment extends Fragment {
     ConnectivityManager cm;
     ArrayList<String> al_cat = new ArrayList();
     ArrayAdapter<String> arrayAdapter;
-    LinearLayout sv;
+    ScrollView sv;
     String selectedCategory = "";
     ProgressDialog mprogressdialog;
     String broadCastId;

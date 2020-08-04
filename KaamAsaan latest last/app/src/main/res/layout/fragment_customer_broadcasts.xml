@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/item_scrollvw"
+<ScrollView android:id="@+id/item_scrollvw"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_below="@+id/tv_title_signup2"
     android:layout_marginTop="50dp"
     android:layout_marginBottom="60dp"
-    android:orientation="vertical"
     android:scrollbarThumbVertical="@color/colorSapphireBlue"
     android:scrollbarSize="5dip"
     android:fadeScrollbars="false"
@@ -147,6 +146,8 @@
                 android:background="@drawable/login_button_border"
                 android:textColor="@color/colorWhite"
                 android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="bottom"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
@@ -161,6 +162,6 @@
 
 
 
-</LinearLayout>
+</ScrollView>
 
 
